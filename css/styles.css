@@ -1,3 +1,50 @@
 body {
     font-family: "Open Sans", sans-serif;
+    font-size: 1rem;
+}
+
+.navbar-brand {
+    font-family: "Lobster", cursive;
+}
+
+.mh-home .mh-header-info .mh-promo span{
+    background-color: #ffb347;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 1px;
+    font-weight: bold;
+    padding: 10px 30px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+
+.mh-home .mh-header-info h2{
+    font-size: 60px;
+    font-weight: 600;
+    line-height: 65px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.social-icon li{
+    border: none;
+}
+
+.social-icon li a {
+    color: #000;
+}
+
+.list-group-item{
+    border: none;
+}
+
+.list-group-item a {
+    color: grey
+}
+
+.flip-horizontally {
+    transform: scaleX(-1);
 }
