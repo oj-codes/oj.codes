@@ -22,7 +22,7 @@ body {
 
 
 .mh-home .mh-header-info h2{
-    font-size: 60px;
+    font-size: 42px;
     font-weight: 600;
     line-height: 65px;
     margin-top: 10px;
@@ -37,12 +37,13 @@ body {
     color: #000;
 }
 
-.list-group-item{
+.list-group-item {
     border: none;
+    padding-bottom: 0;
 }
 
 .list-group-item a {
-    color: grey
+    color: grey;
 }
 
 .flip-horizontally {
