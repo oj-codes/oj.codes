@@ -1,5 +1,5 @@
 var $document = $(document),
-$element = $('.main-header'),
+$element = $('#main-nav'),
 className = 'box-shadow';
 
 $document.scroll(function() {
