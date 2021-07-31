@@ -93,3 +93,15 @@ ff554e
     box-shadow: 0 1px 10px #bbb;
     /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
   }
+
+.shadow-1{
+    -webkit-box-shadow: 0 1px 10px #00000055;
+    /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+    
+    -moz-box-shadow: 0 1px 10px #00000055;
+    /* Firefox 3.5 - 3.6 */
+    
+    box-shadow: 0 1px 10px #00000055;
+    /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+
+}
