@@ -11,10 +11,11 @@
     "watch:scss": "onchange 'css/*.scss' -- npm run scss",
     "watch:all": "parallelshell 'npm run watch:scss' 'npm run lite'",
     "copyfonts": "copyfiles -f node_modules/font-awesome/fonts/* docs/fonts",
+    "copybootstrap": "copyfiles -f node_modules/bootstrap/dist/css/bootstrap.min.css docs/css",
     "imagemin": "imagemin img/* -o docs/img",
     "usemin": "usemin index.html -d docs --htmlmin -o docs/index.html",
     "clean": "rimraf docs",
-    "build": "npm run clean && npm run imagemin && npm run copyfonts && npm run usemin"
+    "build": "npm run clean && npm run imagemin && npm run copybootstrap && npm run copyfonts && npm run usemin"
   },
   "author": "O. J. Wilcox",
   "license": "MIT",
