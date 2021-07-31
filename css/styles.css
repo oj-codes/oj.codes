@@ -1,69 +1,58 @@
 body {
-    font-family: "Open Sans", sans-serif;
-    font-size: 1rem;
-}
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem; }
 
 .navbar-brand {
-    font-family: "Lobster", cursive;
-    font-size: 33px;
-}
+  font-family: "Lobster", cursive;
+  font-size: 33px; }
 
 /* .mh-home .mh-header-info .mh-promo span{ */
 .pill-button {
-    /* background-color: #ffb347; */
-    font-size: 14px;
-    line-height: 24px;
-    letter-spacing: 1px;
-    font-weight: bold;
-    padding: 10px 30px;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
-    border-bottom-left-radius: 20px;
-}
+  /* background-color: #ffb347; */
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 1px;
+  font-weight: bold;
+  padding: 10px 30px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px; }
 
+.mh-home .mh-header-info h2 {
+  font-size: 42px;
+  font-weight: 600;
+  line-height: 65px;
+  margin-top: 10px;
+  margin-bottom: 10px; }
 
-.mh-home .mh-header-info h2{
-    font-size: 42px;
-    font-weight: 600;
-    line-height: 65px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-
-.social-icon li{
-    border: none;
-}
+.social-icon li {
+  border: none; }
 
 .social-icon li a {
-    color: #000;
-}
+  color: #000; }
 
 .list-group-item {
-    border: none;
-    padding-bottom: 0;
-}
+  border: none;
+  padding-bottom: 0; }
 
 .list-group-item a {
-    color: grey;
-}
+  color: grey; }
 
 .flip-horizontally {
-    transform: scaleX(-1);
-}
+  transform: scaleX(-1); }
 
 /*
 ff9505
 ff554e
 */
 .orange-gradient {
-    background-image: linear-gradient(to right,#ff554e, #ffb347);
-}
+  background-image: linear-gradient(to right, #ff554e, #ffb347); }
+
 .orange-gradient-text {
-    background: -webkit-linear-gradient(#ff554e, #ffb347);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
+  background: -webkit-linear-gradient(#ff554e, #ffb347);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; }
+
 .no-border {
-    border: none;
-}
+  border: none; }
