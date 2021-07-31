@@ -1,4 +1,10 @@
+$main-background-color: white;
+$primary-color-light: #ffb347;
+$primary-color-dark: #ff554e; 
+
+
 body {
+    background-color: $main-background-color;
     font-family: "Open Sans", sans-serif;
     font-size: 1rem;
 }
@@ -8,7 +14,6 @@ body {
     font-size: 33px;
 }
 
-/* .mh-home .mh-header-info .mh-promo span{ */
 .pill-button {
     /* background-color: #ffb347; */
     font-size: 14px;
@@ -22,8 +27,7 @@ body {
     border-bottom-left-radius: 20px;
 }
 
-
-.mh-home .mh-header-info h2{
+.oj-home .oj-header-info h2{
     font-size: 42px;
     font-weight: 600;
     line-height: 65px;
@@ -57,33 +61,20 @@ ff9505
 ff554e
 */
 .orange-gradient {
-    background-image: linear-gradient(to right,#ff554e, #ffb347);
+    background-image: linear-gradient(to right, $primary-color-dark, $primary-color-light);
 }
+
 .orange-gradient-text {
-    background: -webkit-linear-gradient(#ff554e, #ffb347);
+    background: -webkit-linear-gradient($primary-color-dark, $primary-color-light);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
 .no-border {
     border: none;
 }
 
-// .navbar{
-//     box-shadow: 0px 6px 6px -6px rgba(0,0,0,.3);
-// }
-// #scrollbox {
-// 	background:
-// 		/* Shadow covers */
-// 		linear-gradient(white 30%, rgba(255,255,255,0)),
-// 		linear-gradient(rgba(255,255,255,0), white 70%) 0 100%,
-		
-// 		/* Shadows */
-// 		radial-gradient(50% 0, farthest-side, rgba(0,0,0,.2), rgba(0,0,0,0)),
-// 		radial-gradient(50% 100%,farthest-side, rgba(0,0,0,.2), rgba(0,0,0,0)) 0 100%;
-// }
-
 .box-shadow {
-
     -webkit-box-shadow: 0 1px 10px #bbb;
     /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
     
@@ -93,3 +84,11 @@ ff554e
     box-shadow: 0 1px 10px #bbb;
     /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
   }
+
+.nav-link {
+    border-bottom: 2px solid $main-background-color;
+}
+
+.nav-link:hover {
+    border-bottom: 2px solid $primary-color-light;
+}

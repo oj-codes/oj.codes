@@ -1,4 +1,5 @@
 body {
+  background-color: white;
   font-family: "Open Sans", sans-serif;
   font-size: 1rem; }
 
@@ -6,7 +7,6 @@ body {
   font-family: "Lobster", cursive;
   font-size: 33px; }
 
-/* .mh-home .mh-header-info .mh-promo span{ */
 .pill-button {
   /* background-color: #ffb347; */
   font-size: 14px;
@@ -19,7 +19,7 @@ body {
   border-bottom-right-radius: 20px;
   border-bottom-left-radius: 20px; }
 
-.mh-home .mh-header-info h2 {
+.oj-home .oj-header-info h2 {
   font-size: 42px;
   font-weight: 600;
   line-height: 65px;
@@ -64,3 +64,9 @@ ff554e
   /* Firefox 3.5 - 3.6 */
   box-shadow: 0 1px 10px #bbb;
   /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */ }
+
+.nav-link {
+  border-bottom: 2px solid white; }
+
+.nav-link:hover {
+  border-bottom: 2px solid #ffb347; }
