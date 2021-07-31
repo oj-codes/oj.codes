@@ -67,3 +67,29 @@ ff554e
 .no-border {
     border: none;
 }
+
+// .navbar{
+//     box-shadow: 0px 6px 6px -6px rgba(0,0,0,.3);
+// }
+// #scrollbox {
+// 	background:
+// 		/* Shadow covers */
+// 		linear-gradient(white 30%, rgba(255,255,255,0)),
+// 		linear-gradient(rgba(255,255,255,0), white 70%) 0 100%,
+		
+// 		/* Shadows */
+// 		radial-gradient(50% 0, farthest-side, rgba(0,0,0,.2), rgba(0,0,0,0)),
+// 		radial-gradient(50% 100%,farthest-side, rgba(0,0,0,.2), rgba(0,0,0,0)) 0 100%;
+// }
+
+.box-shadow {
+
+    -webkit-box-shadow: 0 1px 10px #bbb;
+    /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+    
+    -moz-box-shadow: 0 1px 10px #bbb;
+    /* Firefox 3.5 - 3.6 */
+    
+    box-shadow: 0 1px 10px #bbb;
+    /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+  }
