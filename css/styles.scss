@@ -2,6 +2,8 @@ $main-background-color: white;
 $primary-color-light: #ffb347;
 $primary-color-dark: #ff554e; 
 
+$orange-gradient: linear-gradient(to right, $primary-color-dark, $primary-color-light);
+
 
 body {
     background-color: $main-background-color;
@@ -23,7 +25,7 @@ body {
     border-bottom: 2px solid $primary-color-light;
 }
 
-.pill-button {
+.pill-buttonz {
     /* background-color: #ffb347; */
     font-size: 14px;
     line-height: 24px;
@@ -103,5 +105,238 @@ ff554e
     
     box-shadow: 0 1px 10px #00000055;
     /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+}
 
+.clear
+{
+	clear: both;
+}
+
+.clearfix::before, .clearfix::after
+{
+	content: "";
+	display: table;
+}
+
+.clearfix::after
+{
+	clear: both;
+}
+
+.clearfix
+{
+	zoom: 1;
+}
+
+.project_row {
+    margin-top: 30px;
+}
+
+.row {
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+div {
+    display: block;
+    position: relative;
+    box-sizing: border-box;
+}
+
+section {
+    display: block;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.section_title {
+    margin-bottom: 100px;
+}
+
+.section_title h2 {
+    margin-top: 0px;
+    font-size: 48px;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: #000;
+}
+
+.section_title p {
+    color: #000;
+    margin-top: 20px;
+}
+
+p {
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 400;
+}
+
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.project_image_2::after, .project_image_1::after{
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: '';
+    // background: rgba(37, 40, 57, 0.6);
+    -webkit-transition: all 200ms ease;
+    -moz-transition: all 200ms ease;
+    -ms-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
+    transition: all 200ms ease;
+}
+
+.project_title_large
+{
+	font-size: 30px;
+	font-weight: 700;
+	color: #000;
+	margin-bottom: 20px;
+	margin-top: 0px;
+	line-height: 1.2;
+}
+
+.project_title_small {
+    font-size: 24px;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+h1, .h1, h2, .h2, h3, .h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.project p {
+    margin-bottom: 20px;
+    padding-right: 15px;
+}
+
+.project_button
+{
+	margin-top: 20px;
+}
+
+.project_image_1
+{
+	padding-left: 15px;
+	overflow: hidden;
+}
+
+.project_image_1 img {
+    width: 100%;
+    max-height: 507px;
+}
+
+.project_image_2 {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: auto;
+    // margin-bottom: 30px;
+    overflow: hidden;
+}
+
+.project_image_1 img, .project_image_2 img
+{
+	width: 100%;
+}
+
+.project_image_2 img, .project_image_3 img, .project_image_4 img {
+    width: 100%;
+    max-height: 243px;
+}
+
+/***********************
+Pill Button Small
+***********************/
+
+.pill_button_small
+{
+	display: block;
+	font-size: 11px;
+	font-weight: 700;
+	text-transform: uppercase;
+	// color: #f2b632;
+    color: $primary-color-light;
+	letter-spacing: 1px;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	padding-left: 25px;
+	padding-right: 25px;
+	// border: solid 2px #f2b632;
+    border: solid 2px $primary-color-light;
+	border-radius: 35px;
+	cursor: pointer;
+	float: left;
+	-webkit-transition: all 300ms ease;
+	-moz-transition: all 300ms ease;
+	-ms-transition: all 300ms ease;
+	-o-transition: all 300ms ease;
+	transition: all 300ms ease;
+}
+
+.pill_button_small a
+{
+	// color: #f2b632;
+    color: $primary-color-light;
+	-webkit-transition: all 300ms ease;
+	-moz-transition: all 300ms ease;
+	-ms-transition: all 300ms ease;
+	-o-transition: all 300ms ease;
+	transition: all 300ms ease;
+}
+
+.pill_button_small::before
+{
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: calc(100% + 14px);
+	top: -7px;
+	left: 15px;
+	border: solid 2px rgba(242, 182, 50, 0.22);
+	border-radius: 40px;
+	content: '';
+	z-index: -1;
+	-webkit-transition: all 300ms ease;
+	-moz-transition: all 300ms ease;
+	-ms-transition: all 300ms ease;
+	-o-transition: all 300ms ease;
+	transition: all 300ms ease;
+}
+
+.pill_button_small:hover
+{
+	color: #252839;
+	box-shadow: 0px 0px 15px 5px rgba(242, 182, 50, 0.15);
+}
+
+.pill_button_small:hover a
+{
+	color: #252839;
+}
+
+.pill_button_small:hover::before
+{
+	left: -2px;
+	top: -2px;
+	// background: rgba(242, 182, 50, 1);
+    // background: $primary-color-light;
+    background: $orange-gradient;
+	// border: solid 2px rgba(242, 182, 50, 1);
+    border: $primary-color-light;
+	height: calc(100% + 4px);
+	width: calc(100% + 4px);
 }
