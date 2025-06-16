@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Building Resilience after the June 12 Cloud Failures | ojcodes
+    </title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="container">
+        <div class="logo">ojcodes</div>
+        <nav class="nav">
+          <button class="hamburger" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <ul class="nav-links">
+            <li><a href="../index.html#home">Home</a></li>
+            <li><a href="../index.html#about">About</a></li>
+            <li><a href="../index.html#projects">Projects</a></li>
+            <li><a href="../index.html#blog">Blog</a></li>
+            <li><a href="../index.html#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <article class="blog-post">
+      <h1>Building Resilience after the June 12 Cloud Failures</h1>
+      <div class="meta">
+        <span>Published on June 13, 2025</span> • <span>3 min read</span>
+      </div>
+      <img
+        src="../img/blog/building-resilience-after-the-june-12-cloud-failures-thumbnail-pexels-thirdman-7236846.jpg"
+        alt="Kubernetes Architecture"
+      />
+      <p class="image-caption">Stock photo from Thirdman on pexels.com</p>
+      <div class="content">
+        <p>
+          Imagine having your morning coffee, opening Gmail, and... nothing. No
+          new emails, no calendar reminders, and your Smart Home devices are
+          eerily silent. That was the jolt millions felt on June 12, 2025, when
+          a ripple in Google Cloud’s core systems briefly paused much of the
+          internet.
+        </p>
+
+        <h2>What Happened Exactly</h2>
+        <p>
+          At around 10:49 AM EDT, an automated quota update in Google Cloud’s
+          API management system went sideways. That single, seemingly routine
+          operation caused API requests everywhere to start failing with 503
+          errors. Within minutes, dozens of Google Cloud products, from Identity
+          and Access Management to BigQuery, were rejecting requests worldwide.
+          Engineers pinpointed the faulty quota policy, bypassed the bad check,
+          and began the long process of regional recovery.
+        </p>
+        <p>
+          Note: The us-central1 region experienced longer recovery time compared
+          to most other regions.
+        </p>
+
+        <h2>Which Services Went Dark</h2>
+        <p>The fallout was massive and surprisingly diverse:</p>
+
+        <ul style="list-style-type: none">
+          <li>
+            <b>Google’s Stuff:</b> Gmail, Calendar, Drive, Meet, Nest cameras,
+            YouTube, even emerging services like Vertex AI Online Prediction all
+            saw downtime.
+          </li>
+          <li>
+            <b>Third-Party Apps:</b> Spotify users reported over 46,000 outages
+            at the peak; Discord, Snapchat, DoorDash, Etsy, Shopify, Twitch...
+            the list kept growing as every service that leaned on Google Cloud
+            hit snags.
+          </li>
+          <li>
+            <b>Cloudflare’s Chain Reaction:</b> Cloudflare’s Workers KV store,
+            their backbone for authentication and configuration, failed over 90%
+            of requests. This knocked out Access logins, WARP client sign-ups,
+            Stream uploads, and more; though core services like DNS and Magic
+            Transit remained standing.
+          </li>
+        </ul>
+
+        <h2>What Are Cloudflare's Workers KV?</h2>
+        <p>
+          Think of Workers KV as Cloudflare’s go-to spot for storing the small
+          but vital pieces of data that make its services tick. It’s not a
+          flashy database you log into every day. Instead, it quietly holds the
+          “source of truth” for configuration settings, user identities, and
+          other bits of state that need to be fast and globally available.
+        </p>
+
+        <p>Here’s how it keeps the lights on across Cloudflare’s suite:</p>
+        <ul>
+          <li>
+            Access leans on Workers KV to fetch up-to-date app policies and user
+            identity info whenever someone tries to sign in.
+          </li>
+          <li>
+            Gateway checks Workers KV for the latest device posture and security
+            rules before allowing traffic through.
+          </li>
+          <li>
+            WARP uses it to register devices and check credentials behind the
+            scenes, so your VPN connection just works.
+          </li>
+          <li>
+            Workers AI pulls configuration and routing details from Workers KV
+            to steer your AI workloads.
+          </li>
+          <li>
+            Zaraz, Pages, and Workers Assets all tap into Workers KV to load
+            website optimizations or serve static files quickly.
+          </li>
+        </ul>
+
+        <p>
+          When Workers KV went down, it caused a chain reaction affecting
+          everything built on top of this common data hub. That’s why its health
+          is mission-critical for Cloudflare and for anyone using their
+          platform.
+        </p>
+
+        <h2>The Incident Timeline</h2>
+
+        <p>Here’s how the hours unfolded (all times EDT):</p>
+
+        <ul style="list-style-type: none">
+          <li>
+            <b>10:49 AM</b> – Users begin reporting failures in Google Cloud and
+            Cloudflare WARP.
+          </li>
+          <li>
+            <b>11:05 AM</b> – Cloudflare’s Access team sees SLOs tank and
+            declares a P1 incident.
+          </li>
+          <li>
+            <b>11:30 AM</b> – Downdetector logs over 13,000 Google Cloud issue
+            reports.
+          </li>
+          <li>
+            <b>12:30 PM</b> – Google confirms all regions except us-central1
+            have recovered.
+          </li>
+          <li>
+            <b>1:49 PM</b> – Google declares the primary incident over for most
+            services.
+          </li>
+          <li>
+            <b>3:28 PM</b> – Cloudflare’s dependent services fully bounce back
+            after a 2 hr 28 min outage.
+          </li>
+          <li>
+            <b>6:18 PM</b> – Google posts a mini incident report and marks full
+            recovery.
+          </li>
+        </ul>
+
+        <h2>Official Response and What’s Next</h2>
+        <p>
+          Google apologized “deeply” to users and customers. They attributed the
+          cause to that invalid quota update, pledging to bolster testing, error
+          handling, and metadata protections before global rollout. Cloudflare,
+          while noting Google was the trigger, owned their architecture
+          decisions. They’re now shoring up redundancy in Workers KV, migrating
+          critical namespaces off a single provider, and adding fail-safe
+          tooling.
+        </p>
+
+        <h2>How This Incident Impacts Internet Architecture</h2>
+        <p>
+          There are many reasons why this incident matters for Internet
+          Architecture, but here are the top 3 as I see it:
+        </p>
+
+        <h3>Too Much Trust in One Provider</h3>
+        <p>
+          When a single quota update in Google’s API layer can stall a quarter
+          of global internet traffic, we see the risk in putting all our eggs in
+          one cloud basket.
+        </p>
+
+        <h3>Hidden Single Points of Failure</h3>
+        <p>
+          Centralized identity or storage services save work, but they can
+          become choke points that cascade failures across unrelated apps.
+        </p>
+
+        <h3>The Domino Effect of Dependencies</h3>
+        <p>
+          Even giants like Cloudflare felt the shockwave because their systems
+          leaned on Google Cloud under the hood.
+        </p>
+
+        <p>
+          This outage is a wake-up call: our digital world’s backbone is
+          powerful and, at times, fragile.
+        </p>
+
+        <h2>Call to Action</h2>
+        <p>
+          As SREs, architects, and tech leaders, we must “design for disaster”
+          by diversifying dependencies, building multi-cloud or hybrid
+          fail-overs, and stress-testing every link in our chains.
+        </p>
+        <p>
+          Share your own outage survival hacks below. Let’s have a conversation
+          about turning this global hiccup into a solution for resilience.
+        </p>
+        <p>
+          Because when the next outage hits (and it will), we’ll want more than
+          hope to keep our services alive.
+        </p>
+      </div>
+    </article>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <p>Made with ❤️ by ojcodes. © 2025 All Rights Reserved.</p>
+      </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+  </body>
+</html>

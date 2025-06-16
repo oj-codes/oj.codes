@@ -1,0 +1,121 @@
+.projects-header {
+  padding: 160px 0 120px;
+  background: linear-gradient(135deg, #fff5f5 0%, #fff8f0 100%);
+  text-align: center;
+  margin-top: 0;
+}
+.projects-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--text-color);
+}
+.projects-header p {
+  font-size: 1.25rem;
+  color: var(--light-text);
+  max-width: 600px;
+  margin: 0 auto;
+}
+.project-grid {
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 2rem 0;
+}
+.projects {
+  background: white;
+  padding: 4rem 0;
+}
+.project-grid {
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 2rem 0;
+}
+.projects {
+  background: white;
+  padding: 4rem 0;
+}
+
+.project-header {
+  padding: 160px 0 80px;
+  background: linear-gradient(135deg, #fff5f5 0%, #fff8f0 100%);
+  text-align: center;
+  margin-top: 0;
+}
+.project-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--text-color);
+}
+.project-header p {
+  font-size: 1.25rem;
+  color: var(--light-text);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.project-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+
+.project-content h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: var(--text-color);
+}
+
+.project-content h3 {
+  font-size: 1.5rem;
+  margin: 2rem 0 1rem;
+  color: var(--text-color);
+}
+
+.project-content p {
+  margin-bottom: 1.5rem;
+  line-height: 1.8;
+}
+
+.project-content ul {
+  margin-bottom: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+.project-content li {
+  margin-bottom: 0.5rem;
+  line-height: 1.8;
+}
+
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.tech-stack span {
+  background: var(--section-bg);
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  font-size: 0.9rem;
+  color: var(--text-color);
+}
+
+.project-image {
+  width: 100%;
+  max-width: 800px;
+  margin: 2rem auto;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 2rem;
+  color: var(--accent-color);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}

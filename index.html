@@ -1,312 +1,334 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ojcodes - Senior SRE at DataSnipper</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lobster&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .back-link {
+        display: inline-block;
+        margin-top: 2rem;
+        color: var(--accent-color);
+        text-decoration: none;
+        font-weight: 500;
+        text-align: right;
+        width: 100%;
+      }
 
-<head>
-    <!-- Required meta tags always come first -->
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <!-- <link rel="stylesheet" href="css/bootstrap.min.css" /> -->
-    
-    <!-- Additional CSS must be placed after Bootstrap CSS -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans" />
-
-    <!-- build:css css/main.css -->
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
-    <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" />
-    <link rel="stylesheet" href="css/styles.css" />
-    <!-- endbuild -->
-
-    <!--
-    <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css" />
-    <link rel="stylesheet" href="css/bootstrap-social.css" />
-    <link rel="stylesheet" href="css/styles.css" />
-    -->
-    
-    <title>OJCodes Portfolio Site</title>
-</head>
-
-<body>
-
-    <header class="bg-white">
-        <div class="container">
-            <nav class="navbar navbar-expand-sm navbar-light bg-white fixed-top" id="main-nav">
-                <a class="navbar-brand orange-gradient-text pl-5" href="#">ojcodes</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav mr-0 ml-auto">
-                        <li class="nav-item mr-3">
-                            <a class="nav-link active" href="#home">Home</a>
-                        </li>
-                        <li class="nav-item mr-3">
-                        <a class="nav-link" href="#about">About</a>
-                        </li>
-                        <!--
-                        <li class="nav-item mr-3">
-                        <a class="nav-link" href="#skills">Skills</a>
-                        </li>
-                        -->
-                        <li class="nav-item mr-3">
-                            <a class="nav-link" href="#projects">Projects</a>
-                        </li>
-                        <li class="nav-item mr-3">
-                            <a class="nav-link" href="#blog">Blog</a>
-                        </li>
-                        <li class="nav-item mr-3">
-                            <a class="nav-link" href="#contact">Contact</a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        </div>
+      .back-link:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="container">
+        <div class="logo">ojcodes</div>
+        <nav class="nav">
+          <button class="hamburger" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#personal">Personal</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
-    <!-- Home section -->
-    <section id="home" class="pt-5 mb-5">
-        <div class="container mt-5 pt-5">
-            <div class="row pt-0">
-                <div class="col-sm-6 pt-5">
-                    <div class="header-info pl-5">
-                        <div class="mb-3">
-                            <span class="pill-buttonz bg-light">Hello I'm</span>
-                        </div>
-                        <h1 style="	text-transform: uppercase; font-size:55px">O. J. Wilcox</h2>
-                        <h3>Fullstack Software Engineer</h3>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item">
-                                <i class="fa fa-envelope"></i>
-                                <a href="mailto:ojcodes@protonmail.com">ojcodes@protonmail.com</a>
-                            </li>
-                            <li class="list-group-item">
-                                <i class="fa fa-phone"></i>
-                                <a href="#">+1 (561) 601-2765</a>
-                            </li>
-                            <li class="list-group-item">
-                                <i class="fa fa-map-marker"></i>
-                                <a href="#">South Florida, USA</a>
-                            </li>
-                        </ul>
-                        <ul class="social-icon list-group list-group-horizontal">
-                            <li class="list-group-item">
-                                <a href="#"><i class="fa fa-twitter"></i></a>
-                            </li>
-                            <li class="list-group-item">
-                                <a href="#"><i class="fa fa-linkedin"></i></a>
-                            </li>
-                            <li class="list-group-item">
-                                <a href="#"><i class="fa fa-github"></i></a>
-                            </li>
-                        </ul>
-
-                        <div class="mt-3">
-                            <div class="pill_button_small project_button">
-                                <a href="http://resume.oj.codes">
-                                    <!-- <button class="pill-buttonz orange-gradient text-white no-border">RESUME</button> -->
-                                    RESUME
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6">
-                    <div class="hero-img">
-                        <div class="row img-border">
-                           <img src="img/ojheadshotart-orange.png" class="img-fluid flip-horizontally" />
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>    
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="container">
+        <h1>Transforming Infrastructure Through Code</h1>
+        <p>Senior SRE specializing in DevOps and Software Automation</p>
+        <div class="social-links">
+          <a href="https://linkedin.com/in/ojcodes" target="_blank"
+            ><i class="fab fa-linkedin"></i
+          ></a>
+          <a href="https://instagram.com/oj.codes" target="_blank"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a href="https://github.com/oj-codes" target="_blank"
+            ><i class="fab fa-github"></i
+          ></a>
+        </div>
+        <a href="resume.pdf" class="btn btn-primary" target="_blank"
+          ><span>View Resume</span></a
+        >
+      </div>
     </section>
 
-    <!-- About section -->
-    <section class="pt-5 ml-3 mr-3" id="about">
-        <div class="container">
-            <div class="row pt-5">
-                <div class="col-sm-6 pt-2 order-sm-2 section_title">
-                    <h2>About Me</h2>
-                    <p>With over two decades of software engineering experience, I've worked my way from scrappy tech startups to my recent employer, American Express, a Fortune 100 company.</p>
-                    <p>My skillset includes modernizing legacy code, developing future-proof systems from the ground-up, and mentoring individual contributors.</p>
-                    <p>I'm driven to lead intelligent and creative teams towards innovation and delivery of mission-critical technology products and services.</p>
-
-                    <p>A few of my favorite things:</p>
-                    <ul>
-                        <li>Science Fiction & Fantasy</li>
-                        <li>Percussion Instruments</li>
-                        <li>Regenerative Agriculture</li>
-                        <li>Mind & Body Fitness</li>
-                    </ul>
-                </div>
-                <div class="col-sm-6 text-center pt-5 mt-2">
-                    <img src="img/ojamex.jpeg" class="img-fluid shadow-1" style="width:80%" />
-                </div>
-            </div>
+    <!-- About Section -->
+    <section id="about" class="about">
+      <div class="container">
+        <div class="about-content">
+          <div class="about-image">
+            <img src="img/profile.jpg" alt="Profile Picture" />
+          </div>
+          <div class="about-text">
+            <h2>About Me</h2>
+            <p>
+              I'm a Senior SRE working on the
+              <a href="https://datasnipper.com/product/uplink" target="_blank"
+                >UpLink</a
+              >
+              team at
+              <a href="https://datasnipper.com" target="_blank">DataSnipper</a>,
+              passionate about building scalable and reliable infrastructure.
+              Combining a strong software development background with deep SRE &
+              DevOps expertise, I design scalable, reliable systems and build
+              self-service pipelines that empower teams to move fast without
+              sacrificing stability. Whether I'm writing microservices in Go,
+              authoring Terraform modules, or crafting reusable automation
+              workflows, my focus is always on driving efficiency, reducing
+              toil, and ensuring rock-solid production reliability.
+            </p>
+            <h3>Expertise</h3>
+            <ul class="interests">
+              <li>Software Engineering</li>
+              <li>Infrastructure as Code</li>
+              <li>Cloud Architecture</li>
+              <li>Automation & CI/CD</li>
+              <li>System Reliability</li>
+              <li>Observability</li>
+            </ul>
+          </div>
         </div>
+      </div>
     </section>
 
-
-    <!-- Skills section
-    <section class="pt-5 pb-5 ml-3 mr-3" id="skills">
-        <div class="container">
-            <div class="row pt-5 text-center">
-                <div class="col text-center section_title">
-                    <h2>Skills</h2>
-                </div>
-            </div>
-            <div class="row pb-5">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sapien nisl, tincidunt vitae dictum sed, sodales sit amet enim. Quisque ut quam non elit pulvinar elementum non rutrum purus. Vestibulum condimentum turpis quis mattis ultrices. Donec interdum pulvinar ultrices. </p>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sapien nisl, tincidunt vitae dictum sed, sodales sit amet enim. Quisque ut quam non elit pulvinar elementum non rutrum purus. Vestibulum condimentum turpis quis mattis ultrices. Donec interdum pulvinar ultrices. </p>
-            </div>
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+      <div class="container">
+        <div class="section-header">
+          <h2>Featured Projects & Case Studies</h2>
         </div>
-    </section>
--->
-
-    <!-- Projects section-->
-    <section class="pt-5 pb-5 ml-3 mr-3" id="projects">
-        <div class="container">
-            <div class="row pt-5">
-                <div class="col-md-8 col-sm-12">
-                    <div class="section_title">
-                       <h2>Recent Projects</h2>
-                        <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                    </div>
-                </div>
-                <!-- <div class="col-sm-4">
-                </div> -->
-            </div>
-            <div class="row project clearfix">
-                <div class="col-md-4 col-sm-12 clearfix">
-                    <h2 class="project_title_large">Project 1</h2>
-                    <p>Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled. It has survived not only five centuries, but also the leap into electronic typesetting. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled. It has survived not only five centuries, but also the leap into electronic typesetting.</p>                
-                    <div class="pill_button_small project_button">
-                        <a href="#">
-                            view case study</a>
-                    </div>
-                </div>
-                <div class="col-md-8 col-sm-12 project_image_1 ">
-
-                    <img src="img/gallery_1.jpeg" class="shadow-1" alt="">
-
-                </div>
-            </div>
-            <div class="row project_row">
-                <div class="col-md-4 col-sm-12 project clearfix">
-                    <div class="project_image_2">
-                        <img src="img/gallery_2.jpeg" class="shadow-1" alt="">
-                    </div>
-                    <h2 class="project_title_small">Project 2</h2>
-                    <p>Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled. It has survived not only...</p>
-                    <div class="pill_button_small project_button"><a href="#">view case study</a></div>
-                    <div class="clear"></div>
-                </div>
-                <div class="col-md-4 col-sm-12 project clearfix">
-                    <div class="project_image_3">
-                        <img src="img/gallery_3.jpeg" class="shadow-1" alt="">
-                    </div>
-                    <h2 class="project_title_small">Project 3</h2>
-                    <p>Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled. It has survived not only...</p>
-                    <div class="pill_button_small project_button"><a href="#">view case study</a></div>
-                    <div class="clear"></div>
-                </div>
-                <div class="col-md-4 col-sm-12 project clearfix">
-                    <div class="project_image_4">
-                        <img src="img/gallery_4.jpeg" class="shadow-1" alt="">
-                    </div>
-                    <h2 class="project_title_small">Project 4</h2>
-                    <p>Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled. It has survived not only...</p>
-                    <div class="pill_button_small project_button"><a href="#">view case study</a></div>
-                    <div class="clear"></div>
-                </div>
-            </div>
+        <div class="project-grid">
+          <a href="/projects/uplink-azure-migration.html" class="project-card">
+            <img
+              src="img/datasnipperuplinklogo.jpg"
+              alt="DataSnipper UpLink Logo"
+            />
+            <h3>UpLink Azure Migration</h3>
+            <p>
+              Wrote Terraform modules to migrate UpLink from AWS into Azure,
+              including Container Apps, Document Intelligence and OpenAI–backed
+              services. Designed end-to-end CI/CD pipelines for both backend and
+              frontend, and built Azure Dashboards to surface key SLIs and SLOs
+              (CPU, memory, error rate and latency metrics) for every
+              microservice.
+            </p>
+          </a>
+          <a href="/projects/automation-platform.html" class="project-card">
+            <img src="img/amexlogo.svg" alt="American Express Logo" />
+            <h3>Automation Platform</h3>
+            <p>
+              Developed an internal centralized catalog and execution platform
+              using React on the frontend and Python/Go on the backend.
+              Integrated with Ansible and HashiCorp Vault to securely provision
+              and configure resources. Scaled from zero to 100,000 automated
+              runs per month, serving hundreds of internal applications with
+              self-service automation.
+            </p>
+          </a>
+          <a href="/projects/api-endpoint-monitor.html" class="project-card">
+            <img src="img/amexlogo.svg" alt="American Express Logo" />
+            <h3>API Endpoint Monitor</h3>
+            <p>
+              Rebuilt and expanded a legacy endpoint-monitoring service. As Lead
+              SRE, designed a service-based architecture using Kafka for event
+              ingestion, React for the dashboard, and Python workers for health
+              checks, metrics collection, and alerting. Delivered sub-second
+              detection of outages and streamlined on-call workflows.
+            </p>
+          </a>
         </div>
+
+        <a href="projects.html" class="back-link">View All →</a>
+      </div>
     </section>
 
-    <!-- Blog section-->
-    <section class="pt-5 pb-5 ml-3 mr-3" id="blog">
-        <div class="container">
-            <div class="row pt-5 section_title">
-                <h2>Blog</h2>
-            </div>
-            <div class="row pb-5 d-flex justify-content-center">
-                <!-- card 1 -->
-                <div class="card m-2" style="width: 300px;">
-                    <img src="https://assets.codepen.io/6093409/mountains-1.jpg" alt="a snow-capped mountain range"/>
-                    <div class="card-body">
-                      <h2 class="card-title">What Every Developer Should Know About Network Fundamentals</h2>
-                      <p class="card-text">Placeholder card for future blog posts.</p>
-                      <a href="#" class="btn orange-gradient text-white">Read more</a>
-                    </div>
-                  </div>
-                <!-- card 2 -->
-                <div class="card m-2" style="width: 300px;">
-                    <img src="https://assets.codepen.io/6093409/mountains-1.jpg" alt="a snow-capped mountain range"/>
-                    <div class="card-body">
-                      <h2 class="card-title">The Smart Way To Increase Diversity In STEM Education And Jobs</h2>
-                      <p class="card-text">Placeholder card for future blog posts.</p>
-                      <a href="#" class="btn orange-gradient text-white">Read more</a>
-                    </div>
-                  </div>
-                <!-- card 3 -->
-                <div class="card m-2" style="width: 300px;">
-                    <img src="https://assets.codepen.io/6093409/mountains-1.jpg" alt="a snow-capped mountain range"/>
-                    <div class="card-body">
-                      <h2 class="card-title">How To Research Your Technology Stack Before Proposing It To Your Team</h2>
-                      <p class="card-text">Placeholder card for future blog posts.</p>
-                      <a href="#" class="btn orange-gradient text-white">Read more</a>
-                    </div>
-                  </div>
-            </div>
+    <!-- Personal Projects Section -->
+    <section id="personal" class="projects">
+      <div class="container">
+        <div class="section-header">
+          <h2>Personal Projects</h2>
         </div>
+        <div class="project-grid">
+          <a href="/personal-projects/drummerdiary.html" class="project-card">
+            <img
+              src="img/drummerdiaryscreenshot.png"
+              alt="Personal Project 1"
+            />
+            <h3>Drummer Stats Tracker</h3>
+            <p>
+              A self-built tracker for my journey to 10,000 hours of drumming
+              mastery. Features a live progress bar, total hours practiced,
+              songs learned vs. in progress (with Spotify links), number of
+              performances, and weekly practice heatmaps. Written in Node.js and
+              hosted on GitHub Pages.
+            </p>
+          </a>
+          <a href="#" class="project-card">
+            <div class="coming-soon">Coming Soon</div>
+          </a>
+          <a href="#" class="project-card">
+            <div class="coming-soon">Coming Soon</div>
+          </a>
+        </div>
+
+        <!-- <a href="personal.html" class="back-link">View All →</a> -->
+      </div>
     </section>
 
-    <!-- Contact section-->
-    <section class="pt-5 pb-5 ml-3 mr-3" id="contact">
-        <div class="container">
-            <div class="row pt-5 section_title">
-                <h2>Contact</h2>
-            </div>
-            <div class="row pb-5">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sapien nisl, tincidunt vitae dictum sed, sodales sit amet enim. Quisque ut quam non elit pulvinar elementum non rutrum purus. Vestibulum condimentum turpis quis mattis ultrices. Donec interdum pulvinar ultrices. </p>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sapien nisl, tincidunt vitae dictum sed, sodales sit amet enim. Quisque ut quam non elit pulvinar elementum non rutrum purus. Vestibulum condimentum turpis quis mattis ultrices. Donec interdum pulvinar ultrices. </p>
-            </div>
+    <!-- Blog Section -->
+    <section id="blog" class="blog">
+      <div class="container">
+        <h2>Latest Blog Posts</h2>
+        <div class="blog-grid">
+          <article class="blog-card">
+            <img
+              src="img/blog/building-resilience-after-the-june-12-cloud-failures-thumbnail-pexels-thirdman-7236846.jpg"
+              alt="Blog Post 1"
+            />
+            <h3>Building Resilience after the June 12 Cloud Failures</h3>
+            <p>
+              Imagine having your morning coffee, opening Gmail, and... nothing.
+              No new emails, no calendar reminders, and your Smart Home devices
+              are eerily silent...
+            </p>
+            <a
+              href="blog/2025-06-13-building-resilience-after-the-june-12-cloud-failures.html"
+              class="btn btn-secondary"
+              ><span>Read More</span></a
+            >
+          </article>
+          <article class="blog-card">
+            <div class="coming-soon">Coming Soon</div>
+          </article>
+          <article class="blog-card">
+            <div class="coming-soon">Coming Soon</div>
+          </article>
         </div>
+
+        <a href="blog.html" class="back-link">View All →</a>
+      </div>
     </section>
 
-    <footer class="orange-gradient mt-5 pt-5 pb-5">
-        <div class="container">
-            <div class="row pt-5 pb-5">
-                <div class="col-4">
-             
-                </div>
-                <div class="col-4">
-           
-                </div>
-                <div class="col-4">
-                 
-                </div>
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <h2>Get in Touch</h2>
+        <div class="contact-content">
+          <div class="contact-info">
+            <div class="info-item">
+              <i class="fas fa-envelope"></i>
+              <p>ojcodes@protonmail.com</p>
             </div>
+            <div class="info-item">
+              <i class="fas fa-phone"></i>
+              <p>+1 (561) 601-2765</p>
+            </div>
+            <div class="info-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <p>West Palm Beach, FL</p>
+            </div>
+            <div class="social-links">
+              <a href="https://linkedin.com/in/ojcodes" target="_blank"
+                ><i class="fab fa-linkedin"></i
+              ></a>
+              <a href="https://instagram.com/oj.codes" target="_blank"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="https://github.com/oj-codes" target="_blank"
+                ><i class="fab fa-github"></i
+              ></a>
+            </div>
+          </div>
+          <form
+            class="contact-form"
+            action="https://api.web3forms.com/submit"
+            method="POST"
+          >
+            <input
+              type="hidden"
+              name="access_key"
+              value="bbb2a184-d54d-4672-9749-c7b71dfed9df"
+            />
+
+            <div class="form-group">
+              <input
+                type="text"
+                id="name"
+                name="name"
+                required
+                placeholder="Your Name"
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                placeholder="Your Email"
+              />
+            </div>
+            <div class="form-group">
+              <textarea
+                id="message"
+                name="message"
+                required
+                placeholder="Your Message"
+              ></textarea>
+            </div>
+
+            <!-- Honeypot Spam Protection -->
+            <input
+              type="checkbox"
+              name="botcheck"
+              class="hidden"
+              style="display: none"
+            />
+
+            <!-- Custom Confirmation / Success Page -->
+            <input
+              type="hidden"
+              name="redirect"
+              value="https://oj.codes/thanks.html"
+            />
+
+            <button type="submit" class="btn btn-primary">
+              <span>Send Message</span>
+            </button>
+          </form>
         </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <p>Made with ❤️ by ojcodes. © 2025 All Rights Reserved.</p>
+      </div>
     </footer>
 
-    <!-- jQuery must come first, then Popper.js, then the Bootstrap JavaScript plugins.-->
-    <!-- <script src="js/jquery.slim.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script> -->
-
-    <!-- build:js js/main.js -->
-    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
-    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
-    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="js/scripts.js"></script>
-    <!-- endbuild -->
-    
-</body>
-
+    <script src="js/main.js"></script>
+  </body>
 </html>

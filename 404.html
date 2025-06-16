@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>404 - Page Not Found | ojcodes</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lobster&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .error-page {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 2rem;
+        background: linear-gradient(135deg, #fff5f5 0%, #fff8f0 100%);
+        margin-top: 0;
+      }
+      .error-content {
+        max-width: 600px;
+        margin: 0 auto;
+      }
+      .error-code {
+        font-size: 8rem;
+        font-weight: 700;
+        color: var(--primary-color);
+        line-height: 1;
+        margin-bottom: 1rem;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+      }
+      .error-message {
+        font-size: 1.5rem;
+        color: var(--text-color);
+        margin-bottom: 2rem;
+      }
+      .error-description {
+        color: var(--light-text);
+        margin-bottom: 3rem;
+        font-size: 1.1rem;
+      }
+      .error-actions {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      .error-actions .btn {
+        min-width: 150px;
+      }
+      .error-illustration {
+        margin-bottom: 2rem;
+        font-size: 4rem;
+        color: var(--primary-color);
+        animation: float 3s ease-in-out infinite;
+      }
+      @keyframes float {
+        0% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-20px);
+        }
+        100% {
+          transform: translateY(0px);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="container">
+        <div class="logo">ojcodes</div>
+        <nav class="nav">
+          <button class="hamburger" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <ul class="nav-links">
+            <li><a href="/#home">Home</a></li>
+            <li><a href="/#about">About</a></li>
+            <li><a href="/#projects">Projects</a></li>
+            <li><a href="/#personal">Personal</a></li>
+            <li><a href="/#blog">Blog</a></li>
+            <li><a href="/#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="error-page">
+      <div class="error-content">
+        <div class="error-illustration">
+          <i class="fas fa-rocket"></i>
+        </div>
+        <h1 class="error-code">404</h1>
+        <p class="error-message">Oops! Page Not Found</p>
+        <p class="error-description">
+          The page you're looking for seems to have taken off into space. Don't
+          worry, we can help you get back on track!
+        </p>
+        <div class="error-actions">
+          <a href="/" class="btn btn-primary">
+            <i class="fas fa-home"></i> Back to Home
+          </a>
+          <a href="/#contact" class="btn btn-secondary">
+            <i class="fas fa-envelope"></i> Contact Me
+          </a>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <p>Made with ❤️ by ojcodes. © 2025 All Rights Reserved.</p>
+      </div>
+    </footer>
+
+    <script src="/js/main.js"></script>
+  </body>
+</html>

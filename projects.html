@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Featured Projects | ojcodes</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/projects.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lobster&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .projects-header {
+        padding: 160px 0 120px;
+        background: linear-gradient(135deg, #fff5f5 0%, #fff8f0 100%);
+        text-align: center;
+        margin-top: 0;
+      }
+      .projects-header h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        color: var(--text-color);
+      }
+      .projects-header p {
+        font-size: 1.25rem;
+        color: var(--light-text);
+        max-width: 600px;
+        margin: 0 auto;
+      }
+      .project-grid {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 2rem;
+        padding: 2rem 0;
+      }
+      .projects {
+        background: white;
+        padding: 4rem 0;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="container">
+        <div class="logo">ojcodes</div>
+        <nav class="nav">
+          <button class="hamburger" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <ul class="nav-links">
+            <li><a href="/#home">Home</a></li>
+            <li><a href="/#about">About</a></li>
+            <li><a href="/#projects">Projects</a></li>
+            <li><a href="/#personal">Personal</a></li>
+            <li><a href="/#blog">Blog</a></li>
+            <li><a href="/#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="projects-header">
+        <div class="container">
+          <h1>Featured Projects & Case Studies</h1>
+          <p>
+            Explore my professional work in infrastructure automation, CI/CD,
+            and system reliability.
+          </p>
+        </div>
+      </section>
+
+      <section class="projects">
+        <div class="container">
+          <div class="project-grid">
+            <a
+              href="/projects/uplink-azure-migration.html"
+              class="project-card"
+            >
+              <img
+                src="img/datasnipperuplinklogo.jpg"
+                alt="DataSnipper UpLink Logo"
+              />
+              <h3>UpLink Azure Migration</h3>
+              <p>
+                Wrote Terraform modules to migrate UpLink from AWS into Azure,
+                including Container Apps, Document Intelligence and
+                OpenAI–backed services. Designed end-to-end CI/CD pipelines for
+                both backend and frontend, and built Azure Dashboards to surface
+                key SLIs and SLOs (CPU, memory, error rate and latency metrics)
+                for every microservice.
+              </p>
+            </a>
+            <a href="/projects/automation-platform.html" class="project-card">
+              <img src="img/amexlogo.svg" alt="American Express Logo" />
+              <h3>Automation Platform</h3>
+              <p>
+                Developed an internal centralized catalog and execution platform
+                using React on the frontend and Python/Go on the backend.
+                Integrated with Ansible and HashiCorp Vault to securely
+                provision and configure resources. Scaled from zero to 1 million
+                automated runs per year, serving hundreds of internal
+                applications with self-service automation.
+              </p>
+            </a>
+            <a href="/projects/api-endpoint-monitor.html" class="project-card">
+              <img src="img/amexlogo.svg" alt="American Express Logo" />
+              <h3>API Endpoint Monitor</h3>
+              <p>
+                Rebuilt and expanded a legacy endpoint-monitoring service. As
+                Lead SRE, designed a service-based architecture using Kafka for
+                event ingestion, React for the dashboard, and Python workers for
+                health checks, metrics collection, and alerting. Delivered
+                sub-second detection of outages and streamlined on-call
+                workflows.
+              </p>
+            </a>
+            <a href="#" class="project-card">
+              <div class="coming-soon">Coming Soon</div>
+            </a>
+            <a href="#" class="project-card">
+              <div class="coming-soon">Coming Soon</div>
+            </a>
+            <a href="#" class="project-card">
+              <div class="coming-soon">Coming Soon</div>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <p>Made with ❤️ by ojcodes. © 2025 All Rights Reserved.</p>
+      </div>
+    </footer>
+
+    <script src="/js/main.js"></script>
+  </body>
+</html>

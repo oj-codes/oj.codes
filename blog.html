@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog | ojcodes</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lobster&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <style>
+      .blog-header {
+        padding: 160px 0 80px;
+        background: linear-gradient(135deg, #fff5f5 0%, #fff8f0 100%);
+        text-align: center;
+        margin-top: 0;
+      }
+
+      .blog-header h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        color: var(--text-color);
+      }
+
+      .blog-header p {
+        font-size: 1.25rem;
+        color: var(--light-text);
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      .blog-list {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 4rem 2rem;
+      }
+
+      .blog-post {
+        margin-bottom: 3rem;
+        padding-bottom: 3rem;
+        border-bottom: 1px solid var(--border-color);
+      }
+
+      .blog-post:last-child {
+        border-bottom: none;
+        margin-bottom: 0;
+        padding-bottom: 0;
+      }
+
+      .blog-post h2 {
+        font-size: 1.75rem;
+        margin-bottom: 1rem;
+      }
+
+      .blog-post h2 a {
+        color: var(--text-color);
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+
+      .blog-post h2 a:hover {
+        color: var(--accent-color);
+      }
+
+      .blog-post .meta {
+        color: var(--light-text);
+        margin-bottom: 1rem;
+        font-size: 0.9rem;
+      }
+
+      .blog-post .excerpt {
+        color: var(--text-color);
+        margin-bottom: 1rem;
+        line-height: 1.6;
+      }
+
+      .blog-post .read-more {
+        color: var(--accent-color);
+        text-decoration: none;
+        font-weight: 500;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .blog-post .read-more:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <a href="index.html" class="logo">ojcodes</a>
+        <nav class="nav">
+          <ul class="nav-links">
+            <li><a href="/#home">Home</a></li>
+            <li><a href="/#about">About</a></li>
+            <li><a href="/#projects">Projects</a></li>
+            <li><a href="/#personal">Personal</a></li>
+            <li><a href="/#blog">Blog</a></li>
+            <li><a href="/#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="blog-header">
+        <div class="container">
+          <h1>Blog Posts</h1>
+          <p>
+            Insights and experiences from my journey in DevOps and Software
+            Engineering
+          </p>
+        </div>
+      </section>
+
+      <section class="blog-list">
+        <article class="blog-post">
+          <h2>
+            <a href="blog/post1.html">Scaling Infrastructure with Kubernetes</a>
+          </h2>
+          <div class="meta">
+            <span>June 13, 2025</span> • <span>3 min read</span>
+          </div>
+          <p class="excerpt">
+            In this post, I'll examine the June 12, 2025 Google Cloud outage
+            (caused by a misapplied quota update) that rippled through Gmail,
+            Calendar, Cloudflare services, and numerous third-party apps; This
+            post provides a detailed timeline of events, analyzes the cascading
+            failures, and advocates for multi-cloud strategies, diversified
+            dependencies, and disaster-tested architectures to build greater
+            resilience.
+          </p>
+          <a
+            href="blog/2025-06-13-building-resilience-after-the-june-12-cloud-failures.html"
+            class="read-more"
+          >
+            Read More <i class="fas fa-arrow-right"></i>
+          </a>
+        </article>
+
+        <!-- Add more blog posts here as they are created -->
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2024 ojcodes. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>

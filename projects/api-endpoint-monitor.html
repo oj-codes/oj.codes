@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Monitoring Solution | ojcodes</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/projects.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lobster&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <a href="../index.html" class="logo">ojcodes</a>
+        <nav class="nav">
+          <ul class="nav-links">
+            <li><a href="/#home">Home</a></li>
+            <li><a href="/#about">About</a></li>
+            <li><a href="/#projects">Projects</a></li>
+            <li><a href="/#personal">Personal</a></li>
+            <li><a href="/#blog">Blog</a></li>
+            <li><a href="/#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="project-header">
+        <div class="container">
+          <h1>API Endpoint Monitor</h1>
+          <p>
+            Event-driven monitoring with Kafka, Python workers, and a React
+            dashboard for real-time alerts
+          </p>
+        </div>
+      </section>
+
+      <article class="project-content">
+        <h2>Project Overview</h2>
+        <p>
+          The API Endpoint Monitor project set out to modernize and extend our
+          legacy uptime-checking tool into a scalable, event-driven monitoring
+          platform. As Lead SRE, I redesigned the system around a service-based
+          architecture: Kafka serves as the backbone for ingesting health-check
+          events at high throughput, Python worker services perform distributed
+          endpoint probes, collect metrics, and trigger alerts, and a
+          React-based dashboard provides real-time visibility into service
+          health. By rebuilding the codebase from the ground up, we achieved
+          sub-second outage detection, granular performance insights, and an
+          integrated alert pipeline, streamlining on-call workflows and ensuring
+          our teams could respond faster and more confidently to service
+          degradations.
+        </p>
+
+        <div class="tech-stack">
+          <span>React</span>
+          <span>Python</span>
+          <span>Docker</span>
+          <span>Apache Kafka</span>
+          <span>Couchbase</span>
+          <span>OpenShift</span>
+          <span>GitHub Actions</span>
+          <span>Slack Integrations</span>
+        </div>
+
+        <h3>Key Features</h3>
+        <ul>
+          <li>
+            High-throughput event ingestion pipeline using Kafka for reliable,
+            ordered delivery of health-check events
+          </li>
+          <li>
+            Distributed Python workers that perform asynchronous endpoint probes
+            with configurable intervals, timeouts, and retry policies
+          </li>
+          <li>
+            Interactive React dashboard displaying live service health,
+            historical uptime graphs, and drill-down logs for rapid
+            troubleshooting
+          </li>
+          <li>
+            Kubernetes-based deployment with auto-scaling of worker and API
+            services to handle variable monitoring loads
+          </li>
+          <li>
+            Metric storage in Couchbase, enabling custom queries and long-term
+            retention of performance data
+          </li>
+          <li>
+            Integrated Slack notifications and on-call rotation support to
+            streamline incident response workflows
+          </li>
+          <li>
+            Single sign-on with JWT-based authentication and role-based access
+            controls to secure the monitoring API and dashboard
+          </li>
+        </ul>
+
+        <h3>Implementation Details</h3>
+        <p>
+          To build the API Endpoint Monitor, we first provisioned a Kafka
+          cluster and defined dedicated topics for health-check events, tuning
+          partitioning and replication to ensure reliable, ordered delivery.
+          Python worker services, deployed as Docker containers on our
+          Kubernetes cluster, subscribe to these topics and perform asynchronous
+          HTTP probes with configurable intervals, timeouts, and retries. Each
+          worker writes status updates and performance metrics, such as response
+          times and error codes, into Couchbase buckets optimized with TTL
+          policies and secondary indexes for efficient querying.
+        </p>
+        <p>
+          The backend API, written in Python, exposes endpoints that allow the
+          React dashboard to fetch both real-time and historical data directly
+          from Couchbase. On the frontend, React’s state management and charting
+          libraries render live service health views, uptime graphs, and
+          drill-down logs.
+        </p>
+        <p>
+          Authentication across the API and UI leverages American Express’s
+          single sign-on framework, enforcing corporate access policies without
+          requiring additional credentials. Our GitHub Actions pipelines
+          complete the delivery lifecycle by building and testing application
+          code, packaging Docker images, and deploying updated services into our
+          OpenShift environments, providing a fully automated, secure, and
+          auditable release process.
+        </p>
+
+        <h3>Challenges and Solutions</h3>
+        <p>
+          As the number of monitored endpoints grew, our Kafka ingestion
+          pipeline began to experience backpressure and uneven partition loads.
+          To address this, we tuned the number of partitions and optimized
+          consumer group assignments. We also implemented idempotent message
+          handlers in our Python workers so failed probes could be retried
+          safely without duplicate entries.
+        </p>
+        <p>
+          Managing high-volume health checks introduced complexity around
+          concurrency and resource utilization. We solved this by introducing a
+          configurable worker-pool mechanism that limits the number of parallel
+          probes per instance and by implementing adaptive timeout logic that
+          adjusts intervals based on endpoint responsiveness—ensuring we didn’t
+          overwhelm targets or waste compute cycles on unresponsive services.
+        </p>
+        <p>
+          Writing large volumes of metrics to Couchbase initially led to
+          performance degradation due to index contention and bucket size
+          limits. We overcame this by sharding metrics data across multiple
+          buckets keyed by service namespace, applying TTL policies to purge
+          stale records automatically, and creating composite indexes on
+          critical query fields to accelerate dashboard lookups.
+        </p>
+        <p>
+          Integrating corporate single sign-on required both our React dashboard
+          and Python API to participate in the same authentication flow. We
+          leveraged our internal SSO SDK to enforce session tokens at the API
+          gateway, standardized token refresh logic in the frontend, and
+          developed a shared middleware layer to apply consistent role-based
+          access controls across all endpoints.
+        </p>
+        <p>
+          Finally, ensuring rapid, zero-downtime releases demanded a resilient
+          deployment strategy. We built GitHub Actions workflows that package
+          and test Docker images, then deploy via Kubernetes rolling updates
+          with built-in health probes. This setup allowed us to verify service
+          readiness before shifting traffic and to automatically roll back any
+          failed deployments, keeping the monitoring platform highly available.
+        </p>
+
+        <h3>Results</h3>
+        <ul>
+          <li>
+            Handled over 500,000 health-check events per day (peak throughputs
+            exceeding 350 events/second) without backpressure issues.
+          </li>
+          <li>
+            Reduced average outage detection latency to 300 ms, with 99.98% of
+            failures detected in under one second.
+          </li>
+          <li>
+            Monitored 20+ endpoints across 3 services at launch and scaled
+            seamlessly to 500+ endpoints without any architectural changes.
+          </li>
+          <li>
+            Maintained 99.99% platform uptime over six months, ensuring
+            continuous monitoring and alerting.
+          </li>
+          <li>
+            Cut mean time to resolution by 60%, dropping from 30 minutes to 12
+            minutes thanks to integrated Slack alerts and real-time dashboard
+            insights.
+          </li>
+          <li>
+            Enabled biweekly releases with zero-downtime rolling updates, up
+            from monthly deployments prior to automation.
+          </li>
+        </ul>
+
+        <a href="../index.html#projects" class="back-link"
+          >← Back to Projects</a
+        >
+      </article>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2024 Olivia. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>
