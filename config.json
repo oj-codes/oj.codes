@@ -1,0 +1,40 @@
+{
+  "site": {
+    "title": "ojcodes - Senior SRE at DataSnipper",
+    "description": "Senior SRE specializing in DevOps and Software Automation",
+    "author": "ojcodes",
+    "url": "https://oj.codes"
+  },
+  "homepage": {
+    "hero": {
+      "title": "Transforming Infrastructure Through Code",
+      "subtitle": "Senior SRE specializing in DevOps and Software Automation",
+      "description": "Combining a strong software development background with deep SRE & DevOps expertise, I design scalable, reliable systems and build self-service pipelines that empower teams to move fast without sacrificing stability."
+    },
+    "about": {
+      "title": "About Me",
+      "description": "I'm a Senior SRE working on the UpLink team at DataSnipper, passionate about building scalable and reliable infrastructure. Combining a strong software development background with deep SRE & DevOps expertise, I design scalable, reliable systems and build self-service pipelines that empower teams to move fast without sacrificing stability. Whether I'm writing microservices in Go or Python, authoring Terraform modules, or crafting reusable automation workflows, my focus is always on driving efficiency, reducing toil, and ensuring rock-solid production reliability.",
+      "expertise": [
+        "Software Engineering",
+        "Infrastructure as Code",
+        "Cloud Architecture",
+        "Automation & CI/CD",
+        "System Reliability",
+        "Observability"
+      ]
+    },
+    "contact": {
+      "email": "ojcodes@protonmail.com",
+      "phone": "+1 (561) 601-2765",
+      "location": "West Palm Beach, FL"
+    },
+    "social": {
+      "linkedin": "https://linkedin.com/in/ojcodes",
+      "instagram": "https://instagram.com/oj.codes",
+      "github": "https://github.com/oj-codes"
+    }
+  },
+  "footer": {
+    "github_profile": "https://github.com/oj-codes"
+  }
+} 

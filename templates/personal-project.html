@@ -1,0 +1,115 @@
+{{define "personal-project"}}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{.Content.Title}} - {{.Site.Config.Site.Title}}</title>
+    <meta name="description" content="{{.Content.Description}}" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/projects.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lobster&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .back-link {
+        display: inline-block;
+        margin-top: 2rem;
+        color: var(--accent-color);
+        text-decoration: none;
+        font-weight: 500;
+        text-align: right;
+        width: 100%;
+      }
+
+      .back-link:hover {
+        text-decoration: underline;
+      }
+      
+      .content-body {
+        max-width: 800px;
+        margin: 0 auto;
+        line-height: 1.6;
+      }
+      
+      .featured-image {
+        text-align: center;
+        margin: 2rem 0;
+      }
+      
+      .featured-image img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="container">
+        <div class="logo">ojcodes</div>
+        <nav class="nav">
+          <button class="hamburger" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <ul class="nav-links">
+            <li><a href="/#home">Home</a></li>
+            <li><a href="/#about">About</a></li>
+            <li><a href="/#projects">Projects</a></li>
+            <li><a href="/#personal">Personal</a></li>
+            <li><a href="/#blog">Blog</a></li>
+            <li><a href="/#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="container">
+        <h1>{{.Content.Title}}</h1>
+        <p>{{.Content.Description}}</p>
+        {{if .Content.Tags}}
+          <div class="tech-stack">
+            {{range .Content.Tags}}
+              <span>{{.}}</span>
+            {{end}}
+          </div>
+        {{end}}
+      </div>
+    </section>
+
+    <section class="content">
+      <div class="container">
+        {{if .Content.Image}}
+          <div class="featured-image">
+            <img src="/img/{{.Content.Image}}" alt="{{.Content.Title}}" />
+          </div>
+        {{end}}
+        
+        <div class="content-body">
+          {{.Content.Content}}
+        </div>
+
+        <a href="/personal.html" class="back-link">← Back to Personal Projects</a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <p>Made with ❤️ by <a href="{{.Site.Config.Footer.GithubProfile}}" target="_blank" rel="noopener noreferrer">ojcodes</a>. © 2025 All Rights Reserved.</p>
+      </div>
+    </footer>
+
+    <script src="/js/main.js"></script>
+  </body>
+</html>
+{{end}} 

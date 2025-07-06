@@ -20,21 +20,23 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Setup Node
-        uses: actions/setup-node@v4
+      
+      - name: Setup Go
+        uses: actions/setup-go@v4
         with:
-          node-version: "24"
-          cache: 'npm'
-      - name: Install dependencies & Build
-        run: npm run ci
-      - name: Run tests
-        run: npm run test
+          go-version: '1.21'
+          cache: true
+      
+      - name: Build static site
+        run: go run main.go
+      
       - name: Setup Pages
         uses: actions/configure-pages@v4
+      
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: '.'
+          path: './public'
 
   deploy:
     environment:

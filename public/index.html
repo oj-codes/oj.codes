@@ -1,0 +1,303 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ojcodes - Senior SRE at DataSnipper</title>
+    <meta name="description" content="Senior SRE specializing in DevOps and Software Automation" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lobster&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .back-link {
+        display: inline-block;
+        margin-top: 2rem;
+        color: var(--accent-color);
+        text-decoration: none;
+        font-weight: 500;
+        text-align: right;
+        width: 100%;
+      }
+
+      .back-link:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    
+    <header class="header">
+      <div class="container">
+        <div class="logo">ojcodes</div>
+        <nav class="nav">
+          <button class="hamburger" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <ul class="nav-links">
+            <li><a href="/#home">Home</a></li>
+            <li><a href="/#about">About</a></li>
+            <li><a href="/#projects">Projects</a></li>
+            <li><a href="/#personal">Personal</a></li>
+            <li><a href="/#blog">Blog</a></li>
+            <li><a href="/#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    
+    <section id="home" class="hero">
+      <div class="container">
+        <h1>Transforming Infrastructure Through Code</h1>
+        <p>Senior SRE specializing in DevOps and Software Automation</p>
+        <div class="social-links">
+          <a href="https://linkedin.com/in/ojcodes" target="_blank"
+            ><i class="fab fa-linkedin"></i
+          ></a>
+          <a href="https://instagram.com/oj.codes" target="_blank"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a href="https://github.com/oj-codes" target="_blank"
+            ><i class="fab fa-github"></i
+          ></a>
+        </div>
+        <a href="/uploads/resume.pdf" class="btn btn-primary" target="_blank"
+          ><span>View Resume</span></a
+        >
+      </div>
+    </section>
+
+    
+    <section id="about" class="about">
+      <div class="container">
+        <div class="about-content">
+          <div class="portrait">
+            <img src="/img/profile.png" alt="Profile Picture" />
+          </div>
+          <div class="about-text">
+            <h2>About Me</h2>
+            <p>I&#39;m a Senior SRE working on the UpLink team at DataSnipper, passionate about building scalable and reliable infrastructure. Combining a strong software development background with deep SRE &amp; DevOps expertise, I design scalable, reliable systems and build self-service pipelines that empower teams to move fast without sacrificing stability. Whether I&#39;m writing microservices in Go or Python, authoring Terraform modules, or crafting reusable automation workflows, my focus is always on driving efficiency, reducing toil, and ensuring rock-solid production reliability.</p>
+            <h3>Expertise</h3>
+            <ul class="interests">
+              
+                <li>Software Engineering</li>
+              
+                <li>Infrastructure as Code</li>
+              
+                <li>Cloud Architecture</li>
+              
+                <li>Automation &amp; CI/CD</li>
+              
+                <li>System Reliability</li>
+              
+                <li>Observability</li>
+              
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+    <section id="projects" class="projects">
+      <div class="container">
+        <div class="section-header">
+          <h2>Featured Projects & Case Studies</h2>
+        </div>
+        <div class="project-grid">
+          
+            <a href="/projects/uplink-azure-migration.html" class="project-card">
+              
+                <img src="/img/datasnipperuplinklogo.jpg" alt="UpLink Azure Migration" />
+              
+              <h3>UpLink Azure Migration</h3>
+              <p>Wrote Terraform modules to migrate UpLink from AWS into Azure, including Container Apps, Document Intelligence and OpenAI–backed services. Designed end-to-end CI/CD pipelines for both backend and frontend, and built Azure Dashboards to surface key SLIs and SLOs (CPU, memory, error rate and latency metrics) for every microservice.</p>
+            </a>
+          
+            <a href="/projects/automation-platform.html" class="project-card">
+              
+                <img src="/img/amexlogo.svg" alt="Automation Platform" />
+              
+              <h3>Automation Platform</h3>
+              <p>Developed an internal centralized catalog and execution platform using React on the frontend and Python/Go on the backend. Integrated with Ansible and HashiCorp Vault to securely provision and configure resources. Scaled from zero to 100,000 automated runs per month, serving hundreds of internal applications with self-service automation.</p>
+            </a>
+          
+            <a href="/projects/api-endpoint-monitor.html" class="project-card">
+              
+                <img src="/img/amexlogo.svg" alt="API Endpoint Monitor" />
+              
+              <h3>API Endpoint Monitor</h3>
+              <p>Rebuilt and expanded a legacy endpoint-monitoring service. As Lead SRE, designed a service-based architecture using Kafka for event ingestion, React for the dashboard, and Python workers for health checks, metrics collection, and alerting. Delivered sub-second detection of outages and streamlined on-call workflows.</p>
+            </a>
+          
+        </div>
+
+        <a href="/projects.html" class="back-link">View All →</a>
+      </div>
+    </section>
+
+    
+    <section id="personal" class="projects">
+      <div class="container">
+        <div class="section-header">
+          <h2>Personal Projects</h2>
+        </div>
+        <div class="project-grid">
+          
+            <a href="/personal-projects/drummerdiary.html" class="project-card">
+              
+                <img src="/img/drummerdiaryscreenshot.png" alt="Drummer Stats Tracker" />
+              
+              <h3>Drummer Stats Tracker</h3>
+              <p>A self-built tracker for my journey to 10,000 hours of drumming mastery. Features a live progress bar, total hours practiced, songs learned vs. in progress (with Spotify links), number of performances, and weekly practice heatmaps. Written in Node.js and hosted on GitHub Pages.</p>
+            </a>
+          
+          <a href="#" class="project-card">
+            <div class="coming-soon">Coming Soon</div>
+          </a>
+          <a href="#" class="project-card">
+            <div class="coming-soon">Coming Soon</div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    
+    <section id="blog" class="blog">
+      <div class="container">
+        <h2>Latest Blog Posts</h2>
+        <div class="blog-grid">
+          
+            <article class="blog-card">
+              
+                <img src="/img/blog/building-resilience-after-the-june-12-cloud-failures-thumbnail-pexels-thirdman-7236846.jpg" alt="Building Resilience after the June 12 Cloud Failures" />
+              
+              <h3>Building Resilience after the June 12 Cloud Failures</h3>
+              <p>Imagine having your morning coffee, opening Gmail, and... nothing. No new emails, no calendar reminders, and your Smart Home devices are eerily silent...</p>
+              <a href="/blog/building-resilience-after-the-june-12-cloud-failures.html" class="btn btn-secondary"
+                ><span>Read More</span></a
+              >
+            </article>
+          
+          <article class="blog-card">
+            <div class="coming-soon">Coming Soon</div>
+          </article>
+          <article class="blog-card">
+            <div class="coming-soon">Coming Soon</div>
+          </article>
+        </div>
+
+        <a href="/blog.html" class="back-link">View All →</a>
+      </div>
+    </section>
+
+    
+    <section id="contact" class="contact">
+      <div class="container">
+        <h2>Get in Touch</h2>
+        <div class="contact-content">
+          <div class="contact-info">
+            <div class="info-item">
+              <i class="fas fa-envelope"></i>
+              <p>ojcodes@protonmail.com</p>
+            </div>
+            <div class="info-item">
+              <i class="fas fa-phone"></i>
+              <p>&#43;1 (561) 601-2765</p>
+            </div>
+            <div class="info-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <p>West Palm Beach, FL</p>
+            </div>
+            <div class="social-links">
+              <a href="https://linkedin.com/in/ojcodes" target="_blank"
+                ><i class="fab fa-linkedin"></i
+              ></a>
+              <a href="https://instagram.com/oj.codes" target="_blank"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="https://github.com/oj-codes" target="_blank"
+                ><i class="fab fa-github"></i
+              ></a>
+            </div>
+          </div>
+          <form
+            class="contact-form"
+            action="https://api.web3forms.com/submit"
+            method="POST"
+          >
+            <input
+              type="hidden"
+              name="access_key"
+              value="bbb2a184-d54d-4672-9749-c7b71dfed9df"
+            />
+
+            <div class="form-group">
+              <input
+                type="text"
+                id="name"
+                name="name"
+                required
+                placeholder="Your Name"
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                placeholder="Your Email"
+              />
+            </div>
+            <div class="form-group">
+              <textarea
+                id="message"
+                name="message"
+                required
+                placeholder="Your Message"
+              ></textarea>
+            </div>
+
+            
+            <input
+              type="checkbox"
+              name="botcheck"
+              class="hidden"
+              style="display: none"
+            />
+
+            
+            <input
+              type="hidden"
+              name="redirect"
+              value="https://oj.codes/thanks.html"
+            />
+
+            <button type="submit" class="btn btn-primary">
+              <span>Send Message</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    
+    <footer class="footer">
+      <div class="container">
+        <p>Made with ❤️ by <a href="https://github.com/oj-codes" target="_blank" rel="noopener noreferrer">ojcodes</a>. © 2025 All Rights Reserved.</p>
+      </div>
+    </footer>
+
+    <script src="/js/main.js"></script>
+  </body>
+</html>

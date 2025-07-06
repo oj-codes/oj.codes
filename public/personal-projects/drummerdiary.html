@@ -1,0 +1,202 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Drummer Stats Tracker - ojcodes - Senior SRE at DataSnipper</title>
+    <meta name="description" content="A self-built tracker for my journey to 10,000 hours of drumming mastery. Features a live progress bar, total hours practiced, songs learned vs. in progress (with Spotify links), number of performances, and weekly practice heatmaps. Written in Node.js and hosted on GitHub Pages." />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/projects.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lobster&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .back-link {
+        display: inline-block;
+        margin-top: 2rem;
+        color: var(--accent-color);
+        text-decoration: none;
+        font-weight: 500;
+        text-align: right;
+        width: 100%;
+      }
+
+      .back-link:hover {
+        text-decoration: underline;
+      }
+      
+      .content-body {
+        max-width: 800px;
+        margin: 0 auto;
+        line-height: 1.6;
+      }
+      
+      .featured-image {
+        text-align: center;
+        margin: 2rem 0;
+      }
+      
+      .featured-image img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    
+    <header class="header">
+      <div class="container">
+        <div class="logo">ojcodes</div>
+        <nav class="nav">
+          <button class="hamburger" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <ul class="nav-links">
+            <li><a href="/#home">Home</a></li>
+            <li><a href="/#about">About</a></li>
+            <li><a href="/#projects">Projects</a></li>
+            <li><a href="/#personal">Personal</a></li>
+            <li><a href="/#blog">Blog</a></li>
+            <li><a href="/#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="container">
+        <h1>Drummer Stats Tracker</h1>
+        <p>A self-built tracker for my journey to 10,000 hours of drumming mastery. Features a live progress bar, total hours practiced, songs learned vs. in progress (with Spotify links), number of performances, and weekly practice heatmaps. Written in Node.js and hosted on GitHub Pages.</p>
+        
+          <div class="tech-stack">
+            
+              <span>HTML</span>
+            
+              <span>CSS</span>
+            
+              <span>JavaScript</span>
+            
+              <span>Node.js</span>
+            
+              <span>Github Pages</span>
+            
+              <span>Cursor AI</span>
+            
+              <span>Github Actions</span>
+            
+              <span>Spotify Links</span>
+            
+          </div>
+        
+      </div>
+    </section>
+
+    <section class="content">
+      <div class="container">
+        
+          <div class="featured-image">
+            <img src="/img/drummerdiaryscreenshot.png" alt="Drummer Stats Tracker" />
+          </div>
+        
+        
+        <div class="content-body">
+          <h1 id="drummer-stats-tracker">Drummer Stats Tracker</h1>
+<h2 id="overview">Overview</h2>
+<p>The Drummer Stats Tracker is a lightweight, browser-based journal designed to motivate and document my journey to 10,000 hours of drumming mastery, inspired by Malcolm Gladwell's &quot;Outliers&quot; theory. Built in a single lunch break, the tracker provides an intuitive interface for logging daily practice hours, band rehearsals, and live performances. It visualizes progress toward the 10,000-hour goal with a dynamic progress bar, tracks songs learned versus those in progress, and organizes 40 essential drum rudiments by difficulty tier.</p>
+<p>By leveraging plain HTML, CSS, and JavaScript, the application requires no backend and works seamlessly across devices. Within minutes of completing the prototype, I deployed the app to GitHub Pages under a custom domain, enabling instant, secure access to my personal stats and reinforcing consistent practice habits through immediate feedback.</p>
+<h2 id="features">Features</h2>
+<h3 id="progress-tracking">Progress Tracking</h3>
+<ul>
+<li><strong>Live Progress Bar</strong>: Real-time visualization of progress toward 10,000 hours</li>
+<li><strong>Total Hours Counter</strong>: Cumulative practice time tracking with daily updates</li>
+<li><strong>Practice Sessions</strong>: Detailed logging of individual practice sessions with duration and focus areas</li>
+</ul>
+<h3 id="song-management">Song Management</h3>
+<ul>
+<li><strong>Learning vs. Mastered</strong>: Categorized tracking of songs in progress vs. fully learned</li>
+<li><strong>Spotify Integration</strong>: Direct links to songs for easy access during practice</li>
+</ul>
+<h3 id="performance-tracking">Performance Tracking</h3>
+<ul>
+<li><strong>Performance Counter</strong>: Number of live performances and gigs</li>
+</ul>
+<h3 id="analytics--visualization">Analytics &amp; Visualization</h3>
+<ul>
+<li><strong>Goal Setting</strong>: Custom milestones and achievement tracking</li>
+</ul>
+<h2 id="technical-implementation-details">Technical Implementation Details</h2>
+<h3 id="frontend">Frontend</h3>
+<ul>
+<li><strong>Vanilla JavaScript</strong>: Lightweight, fast-loading application</li>
+<li><strong>CSS Grid &amp; Flexbox</strong>: Responsive design that works on all devices</li>
+<li><strong>Local Storage</strong>: Offline capability with data persistence</li>
+<li><strong>Progressive Web App</strong>: Installable as a native app on mobile devices</li>
+</ul>
+<h3 id="data-management">Data Management</h3>
+<ul>
+<li><strong>JSON Storage</strong>: Simple, human-readable data format</li>
+<li><strong>Data Validation</strong>: Input validation and error handling</li>
+<li><strong>Migration Support</strong>: Version management for data schema updates</li>
+</ul>
+<h3 id="deployment">Deployment</h3>
+<ul>
+<li><strong>GitHub Pages</strong>: Free hosting with automatic deployments</li>
+<li><strong>Custom Domain</strong>: Professional URL with SSL certificate</li>
+</ul>
+<p>I kickstarted the Drummer Stats Tracker during a single lunch break by researching similar tools, discovering surferdiary.com, and then hand-coding a quick prototype in plain HTML, CSS, and JavaScript. In roughly 20 minutes, I had the core UI in place: a dynamic progress bar, input fields for logging practice hours, performances, and song statuses, plus a static list of 40 rudiments organized by difficulty and a section displaying my current drum kit. To polish the look and feel, I briefly experimented with Cursor AI suggestions but ultimately refined the CSS and JavaScript by hand to ensure clean, efficient code and full responsive support across mobile and desktop.</p>
+<p>Once the alpha version met my criteria, I pushed the code to a new GitHub repository, turned on GitHub Pages hosting, and linked my Namecheap domain via custom DNS records. I enabled SSL in the Pages settings and pointed everything at the main branch, so that within ten minutes of finishing development the tracker was live and secure. The result is a lightweight, browser-based journal that tracks every facet of my drumming journey toward 10,000 hours with zero backend dependencies.</p>
+<h2 id="personal-impact">Personal Impact</h2>
+<h3 id="motivation">Motivation</h3>
+<ul>
+<li><strong>Visual Progress</strong>: Seeing the progress bar fill up provides daily motivation</li>
+<li><strong>Goal Achievement</strong>: Celebrating milestones keeps the journey exciting</li>
+</ul>
+<h3 id="skill-development">Skill Development</h3>
+<ul>
+<li><strong>Focused Practice</strong>: Structured tracking helps identify areas needing attention</li>
+<li><strong>Song Mastery</strong>: Clear progression from learning to mastering songs</li>
+<li><strong>Performance Confidence</strong>: Tracking performances builds stage confidence</li>
+</ul>
+<h3 id="habit-formation">Habit Formation</h3>
+<ul>
+<li><strong>Daily Routine</strong>: Consistent practice becomes a natural part of daily life</li>
+<li><strong>Accountability</strong>: Public tracking creates accountability to the community</li>
+<li><strong>Reflection</strong>: Regular review of progress helps identify patterns and improvements</li>
+</ul>
+<h2 id="challenges-and-solutions">Challenges and Solutions</h2>
+<p>Working within the confines of a single lunch break demanded rapid prototyping without sacrificing usability. To meet this tight deadline, I skipped elaborate mockups and dived straight into hand-coding the core functionality in plain HTML, CSS, and JavaScript. This approach let me flesh out the progress bar, statistics cards, achievements,song list, rudiment list, and drum kit showcase section in under twenty minutes, ensuring a working alpha by the end of the break.</p>
+<p>Early experiments with Cursor AI for styling and code suggestions introduced unexpected inefficiencies and hallucinated snippets that didn’t align with the project’s lightweight goals. Recognizing this, I selectively applied only the AI’s most reliable recommendations and reverted the rest, refining the UI and JavaScript manually to maintain clean, performant code.</p>
+<p>Delivering a seamless experience across phones, tablets, and desktops meant tackling responsive styling challenges on the fly. I adopted a mobile-first CSS strategy, used flexible layouts and media queries, and tested the tracker in multiple browsers to guarantee that all components, from the progress bar to the drum kit section, remained functional and visually coherent.</p>
+<p>Finally, taking the app live in under ten minutes demanded a frictionless deployment. I pushed the repository to GitHub, enabled Pages hosting, configured custom DNS records through Namecheap, and activated SSL with a single toggle in the Pages settings. This streamlined release process ensured that the tracker was both instantly accessible and secure, reinforcing its role as a reliable practice companion.</p>
+<h2 id="lessons-learned">Lessons Learned</h2>
+<ul>
+<li><strong>Start Simple</strong>: Begin with basic tracking and add features incrementally</li>
+<li><strong>Consistency Over Perfection</strong>: Regular updates are better than perfect features</li>
+<li><strong>Community Value</strong>: Sharing progress inspires others and creates accountability</li>
+</ul>
+
+        </div>
+
+        <a href="/personal.html" class="back-link">← Back to Personal Projects</a>
+      </div>
+    </section>
+
+    
+    <footer class="footer">
+      <div class="container">
+        <p>Made with ❤️ by <a href="https://github.com/oj-codes" target="_blank" rel="noopener noreferrer">ojcodes</a>. © 2025 All Rights Reserved.</p>
+      </div>
+    </footer>
+
+    <script src="/js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,190 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Building Resilience after the June 12 Cloud Failures - ojcodes - Senior SRE at DataSnipper</title>
+    <meta name="description" content="Imagine having your morning coffee, opening Gmail, and... nothing. No new emails, no calendar reminders, and your Smart Home devices are eerily silent..." />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/projects.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lobster&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .back-link {
+        display: inline-block;
+        margin-top: 2rem;
+        color: var(--accent-color);
+        text-decoration: none;
+        font-weight: 500;
+        text-align: right;
+        width: 100%;
+      }
+
+      .back-link:hover {
+        text-decoration: underline;
+      }
+      
+      .content-body {
+        max-width: 800px;
+        margin: 0 auto;
+        line-height: 1.6;
+      }
+      
+      .featured-image {
+        text-align: center;
+        margin: 2rem 0;
+      }
+      
+      .featured-image img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    
+    <header class="header">
+      <div class="container">
+        <div class="logo">ojcodes</div>
+        <nav class="nav">
+          <button class="hamburger" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <ul class="nav-links">
+            <li><a href="/#home">Home</a></li>
+            <li><a href="/#about">About</a></li>
+            <li><a href="/#projects">Projects</a></li>
+            <li><a href="/#personal">Personal</a></li>
+            <li><a href="/#blog">Blog</a></li>
+            <li><a href="/#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="container">
+        <h1>Building Resilience after the June 12 Cloud Failures</h1>
+        <p>Imagine having your morning coffee, opening Gmail, and... nothing. No new emails, no calendar reminders, and your Smart Home devices are eerily silent...</p>
+        <div style="margin-bottom: 1rem; color: var(--light-text); font-size: 1rem; text-align: center;">
+          June 13, 2025
+        </div>
+        
+          <div class="tech-stack">
+            
+              <span>Cloud Computing</span>
+            
+              <span>Resilience</span>
+            
+              <span>Infrastructure</span>
+            
+              <span>Lessons Learned</span>
+            
+          </div>
+        
+      </div>
+    </section>
+
+    <section class="content">
+      <div class="container">
+        
+          <div class="featured-image">
+            <img src="/img/blog/building-resilience-after-the-june-12-cloud-failures-thumbnail-pexels-thirdman-7236846.jpg" alt="Building Resilience after the June 12 Cloud Failures" />
+          </div>
+        
+        
+        <div class="content-body">
+          <h1 id="building-resilience-after-the-june-12-cloud-failures">Building Resilience after the June 12 Cloud Failures</h1>
+<p>Imagine having your morning coffee, opening Gmail, and... nothing. No new emails, no calendar reminders, and your Smart Home devices are eerily silent. This was the reality for millions of users on June 12, 2025, when a cascade of cloud service failures brought down major platforms including Google Workspace, Microsoft 365, and countless other services that depend on these foundational cloud providers.</p>
+<h2 id="the-day-everything-broke">The Day Everything Broke</h2>
+<p>The morning of June 12 started like any other day. I was working from home, preparing for a day of infrastructure planning meetings. At 9:15 AM, my Slack notifications stopped. By 9:30, Gmail was completely inaccessible. By 10:00, even my smart home devices were offline, unable to reach their cloud-based control systems.</p>
+<p>What followed was a 12-hour period where the internet as we know it essentially stopped working for a significant portion of the global workforce. Teams couldn't collaborate, businesses couldn't process transactions, and critical services were unavailable.</p>
+<h2 id="the-domino-effect">The Domino Effect</h2>
+<p>The failure wasn't isolated to a single service. It was a perfect storm of interconnected dependencies:</p>
+<ol>
+<li><strong>Primary Cloud Provider Outage</strong>: A major cloud provider experienced a catastrophic failure in their core infrastructure</li>
+<li><strong>Cascading Dependencies</strong>: Services that depend on this provider began failing in sequence</li>
+<li><strong>Secondary Failures</strong>: Backup systems and failover mechanisms also failed due to similar underlying issues</li>
+<li><strong>Global Impact</strong>: The outage affected services worldwide, demonstrating the concentration of risk in modern cloud architecture</li>
+</ol>
+<h2 id="lessons-for-infrastructure-engineers">Lessons for Infrastructure Engineers</h2>
+<h3 id="1-multi-cloud-strategy-is-not-just-a-buzzword">1. Multi-Cloud Strategy is Not Just a Buzzword</h3>
+<p>The June 12 failures demonstrated that even the most reliable cloud providers can experience catastrophic failures. A true multi-cloud strategy means:</p>
+<ul>
+<li><strong>Active-Active Deployments</strong>: Running services simultaneously across multiple cloud providers</li>
+<li><strong>Independent Data Stores</strong>: Ensuring data can be accessed even if one cloud provider is down</li>
+<li><strong>Traffic Routing</strong>: Intelligent routing that can shift traffic between providers in real-time</li>
+</ul>
+<h3 id="2-edge-computing-and-local-processing">2. Edge Computing and Local Processing</h3>
+<p>The complete dependency on cloud services left many organizations helpless. Consider:</p>
+<ul>
+<li><strong>Local Processing</strong>: Critical functions should be able to operate with limited cloud connectivity</li>
+<li><strong>Edge Computing</strong>: Processing data closer to where it's generated reduces cloud dependency</li>
+<li><strong>Offline Capabilities</strong>: Applications should gracefully degrade when cloud services are unavailable</li>
+</ul>
+<h3 id="3-data-sovereignty-and-backup-strategies">3. Data Sovereignty and Backup Strategies</h3>
+<p>The outage highlighted the importance of data control:</p>
+<ul>
+<li><strong>Geographic Distribution</strong>: Data stored across multiple regions and providers</li>
+<li><strong>Regular Backups</strong>: Automated, tested backup procedures that don't depend on cloud services</li>
+<li><strong>Recovery Testing</strong>: Regular disaster recovery drills that simulate complete cloud failures</li>
+</ul>
+<h2 id="building-resilience-in-your-infrastructure">Building Resilience in Your Infrastructure</h2>
+<h3 id="immediate-actions">Immediate Actions</h3>
+<ol>
+<li><strong>Audit Dependencies</strong>: Map all your cloud dependencies and identify single points of failure</li>
+<li><strong>Implement Monitoring</strong>: Set up comprehensive monitoring that can detect issues before they become critical</li>
+<li><strong>Create Runbooks</strong>: Document procedures for operating during cloud outages</li>
+</ol>
+<h3 id="medium-term-improvements">Medium-term Improvements</h3>
+<ol>
+<li><strong>Multi-Cloud Architecture</strong>: Design systems that can operate across multiple cloud providers</li>
+<li><strong>Local Fallbacks</strong>: Implement local processing capabilities for critical functions</li>
+<li><strong>Data Replication</strong>: Ensure data is replicated across multiple providers and regions</li>
+</ol>
+<h3 id="long-term-strategy">Long-term Strategy</h3>
+<ol>
+<li><strong>Resilience by Design</strong>: Build resilience into every system from the ground up</li>
+<li><strong>Regular Testing</strong>: Conduct regular failure simulations and recovery exercises</li>
+<li><strong>Team Training</strong>: Ensure your team is prepared to respond to major outages</li>
+</ol>
+<h2 id="the-human-factor">The Human Factor</h2>
+<p>Beyond the technical lessons, the June 12 failures taught us about the human aspects of infrastructure:</p>
+<ul>
+<li><strong>Communication Plans</strong>: Have clear communication channels that don't depend on cloud services</li>
+<li><strong>Team Preparedness</strong>: Train teams to operate during extended outages</li>
+<li><strong>Customer Expectations</strong>: Set realistic expectations about service availability and recovery times</li>
+</ul>
+<h2 id="looking-forward">Looking Forward</h2>
+<p>The June 12 cloud failures were a wake-up call for the entire industry. They demonstrated that even the most sophisticated cloud infrastructure can fail, and that our increasing dependence on cloud services creates new risks.</p>
+<p>As infrastructure engineers, our responsibility is to build systems that are not just reliable, but resilient. Systems that can continue operating even when the cloud fails. Systems that protect our users and our businesses from the cascading effects of cloud outages.</p>
+<p>The future of infrastructure isn't just about moving to the cloud—it's about building systems that can survive when the cloud fails.</p>
+<hr />
+<p><em>This post was written during a period of reflection after the June 12, 2025 cloud failures. The lessons learned will continue to influence how we design and operate infrastructure systems for years to come.</em></p>
+
+        </div>
+
+        <a href="/blog.html" class="back-link">← Back to Blog</a>
+      </div>
+    </section>
+
+    
+    <footer class="footer">
+      <div class="container">
+        <p>Made with ❤️ by <a href="https://github.com/oj-codes" target="_blank" rel="noopener noreferrer">ojcodes</a>. © 2025 All Rights Reserved.</p>
+      </div>
+    </footer>
+
+    <script src="/js/main.js"></script>
+  </body>
+</html>

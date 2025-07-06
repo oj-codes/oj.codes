@@ -1,156 +1,277 @@
-# ojcodes Portfolio
+# Static Site Generator
 
-A modern, responsive portfolio website built with HTML, CSS, and JavaScript. Features a clean design, smooth animations, and a focus on showcasing professional work and personal projects.
+A Go-based static site generator for the ojcodes website. This generator reads markdown content files and configuration to build a complete static website.
 
 ## Features
 
-- 🎨 Modern, clean design with smooth animations
-- 📱 Fully responsive layout
-- 🎯 Project showcase with detailed case studies
-- 📝 Blog section
-- 📬 Working contact form using Web3Forms
-- 🔍 SEO optimized
-- ⚡ Fast loading times
-- 📱 Accessible design
+- **Markdown Support**: Content written in markdown with YAML front matter
+- **Template System**: HTML templates with Go template syntax
+- **Configuration Driven**: Site content and settings in JSON configuration
+- **Static Asset Management**: Automatic copying of CSS, JS, images, and other assets
+- **Content Organization**: Structured content directories for projects, personal projects, and blog posts
+- **Responsive Design**: Mobile-friendly templates that work on all devices
 
-## Local Development Setup
+## Directory Structure
 
-### Prerequisites
-
-- [Node.js](https://nodejs.org/) (v20 or later)
-- [npm](https://www.npmjs.com/) (comes with Node.js)
-- [Git](https://git-scm.com/) (for version control)
-
-### Installation
-
-1. Clone the repository:
-
-```bash
-git clone https://github.com/ojcodes/oj.codes.git
-cd oj.codes
+```
+.
+├── main.go                 # Main Go application
+├── go.mod                  # Go module file
+├── config.json             # Site configuration
+├── content/                # Markdown content files
+│   ├── projects/           # Professional projects
+│   ├── personal-projects/  # Personal projects
+│   └── blog/              # Blog posts
+├── static/                 # Static assets
+│   ├── css/               # Stylesheets
+│   ├── js/                # JavaScript files
+│   ├── img/               # Images
+│   └── uploads/           # PDFs and other files
+├── templates/              # HTML templates
+│   ├── base.html          # Base template
+│   ├── index.html         # Homepage template
+│   ├── projects.html      # Projects listing template
+│   ├── personal.html      # Personal projects template
+│   ├── blog.html          # Blog listing template
+│   ├── project.html       # Individual project template
+│   ├── personal-project.html # Individual personal project template
+│   ├── blog-post.html     # Individual blog post template
+│   ├── 404.html           # 404 error page
+│   └── thanks.html        # Thank you page
+└── public/                # Generated static site (created by generator)
 ```
 
-2. Install dependencies:
+## Installation
 
-```bash
-npm install
+1. **Install Go**: Make sure you have Go 1.21 or later installed
+2. **Clone the repository**: 
+   ```bash
+   git clone <repository-url>
+   cd static-site-generator
+   ```
+3. **Install dependencies**:
+   ```bash
+   go mod tidy
+   ```
+
+## Configuration
+
+The `config.json` file contains all the site configuration:
+
+```json
+{
+  "site": {
+    "title": "ojcodes - Senior SRE at DataSnipper",
+    "description": "Senior SRE specializing in DevOps and Software Automation",
+    "author": "ojcodes",
+    "url": "https://oj.codes"
+  },
+  "homepage": {
+    "hero": {
+      "title": "Transforming Infrastructure Through Code",
+      "subtitle": "Senior SRE specializing in DevOps and Software Automation"
+    },
+    "about": {
+      "title": "About Me",
+      "description": "...",
+      "expertise": ["Software Engineering", "Infrastructure as Code", ...]
+    },
+    "contact": {
+      "email": "ojcodes@protonmail.com",
+      "phone": "+1 (561) 601-2765",
+      "location": "West Palm Beach, FL"
+    },
+    "social": {
+      "linkedin": "https://linkedin.com/in/ojcodes",
+      "instagram": "https://instagram.com/oj.codes",
+      "github": "https://github.com/oj-codes"
+    }
+  }
+}
 ```
 
-3. Start the development server:
+## Content Format
 
-```bash
-npm start
+Content files are written in markdown with YAML front matter:
+
+```markdown
+---
+title: Project Title
+description: Brief description of the project
+date: 2024-01-15
+image: project-image.jpg
+tags: tag1, tag2, tag3
+---
+
+# Project Title
+
+Your markdown content here...
+
+## Section 1
+
+Content for section 1...
+
+## Section 2
+
+Content for section 2...
 ```
 
-The site will be available at `http://localhost:3000`
+### Front Matter Fields
 
-### Available Scripts
+- **title**: The title of the content
+- **description**: Brief description (used in listings)
+- **date**: Publication date (YYYY-MM-DD format)
+- **image**: Image filename (stored in static/img/)
+- **tags**: Comma-separated list of tags
 
-In the project directory, you can run:
+## Usage
 
-### `npm start`
+### Generate the Site
 
-Runs the app in production mode using the `serve` package.
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+```bash
+go run main.go
+```
 
-### `npm run dev`
+This will:
+1. Read the configuration from `config.json`
+2. Process all markdown files in the content directories
+3. Copy static assets from `static/` to `public/`
+4. Generate HTML pages using the templates
+5. Output the complete static site to `public/`
 
-Runs the app in development mode using `nodemon`.
-The page will reload when you make changes.
+### Build for Production
 
-### `npm test`
+```bash
+go build -o static-site-generator main.go
+./static-site-generator
+```
 
-Launches the test runner in interactive watch mode using Jest.
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Development Workflow
 
-### `npm run lint`
+1. **Add Content**: Create new markdown files in the appropriate content directory
+2. **Update Configuration**: Modify `config.json` for site-wide changes
+3. **Customize Templates**: Edit HTML templates in the `templates/` directory
+4. **Add Assets**: Place images, CSS, JS files in the `static/` directory
+5. **Generate**: Run the generator to build the updated site
+6. **Deploy**: Upload the `public/` directory to your web server
 
-Runs ESLint to check for code style and potential errors.
+## Content Organization
 
-### `npm run lint:fix`
+### Projects (`content/projects/`)
+Professional projects and case studies. Each file should include:
+- Detailed technical implementation
+- Business impact and results
+- Lessons learned
+- Technologies used
 
-Runs ESLint and automatically fixes any auto-fixable issues.
+### Personal Projects (`content/personal-projects/`)
+Side projects and personal experiments. Include:
+- Project motivation and goals
+- Technical implementation details
+- Personal impact and learning
+- Future enhancements
 
-### `npm run format`
+### Blog Posts (`content/blog/`)
+Technical articles and thoughts. Structure with:
+- Clear introduction and context
+- Detailed technical content
+- Practical examples and code
+- Conclusions and next steps
 
-Runs Prettier to format all supported files in the project.
+## Templates
 
-### `npm run build`
+The template system uses Go's `html/template` package with the following templates:
 
-Runs both the format and lint scripts to ensure code quality.
+- **base.html**: Base template with common header, footer, and navigation
+- **index.html**: Homepage with hero, about, projects, and contact sections
+- **projects.html**: Grid layout for all projects
+- **personal.html**: Grid layout for personal projects
+- **blog.html**: Grid layout for blog posts
+- **project.html**: Individual project page
+- **personal-project.html**: Individual personal project page
+- **blog-post.html**: Individual blog post page
+- **404.html**: Error page
+- **thanks.html**: Form submission confirmation
 
-### `npm run ci`
+## Customization
 
-Runs a clean install of dependencies and then runs the build script.
-This is typically used in CI/CD pipelines.
+### Adding New Content Types
 
-## GitHub Pages Deployment
+1. Create a new content directory in `content/`
+2. Add a new template in `templates/`
+3. Update `main.go` to load and process the new content type
+4. Add the content to the site data structure
 
-This site is automatically deployed to GitHub Pages using GitHub Actions. The deployment process is triggered on every push to the main branch.
+### Modifying Templates
 
-### Setup GitHub Pages
+Templates use Go template syntax:
+- `{{.Site.Config}}` - Access site configuration
+- `{{range .Site.Projects}}` - Loop through projects
+- `{{.Content.Title}}` - Access content fields
+- `{{template "content" .}}` - Include other templates
 
-1. Go to your repository settings on GitHub
-2. Navigate to "Pages" under "Code and automation"
-3. Under "Build and deployment":
-   - Source: Select "GitHub Actions"
-   - Branch: Select "main"
+### Styling
 
-### Manual Deployment
+CSS files are stored in `static/css/` and automatically copied to the output. The main stylesheet is `style.css`.
 
-You can manually trigger a deployment by:
+## Deployment
 
-1. Going to the "Actions" tab in your repository
-2. Selecting the "Deploy to GitHub Pages" workflow
-3. Clicking "Run workflow"
+The generated site in the `public/` directory can be deployed to any static hosting service:
 
-### Contact Form Setup
+- **GitHub Pages**: Push the `public/` directory to a GitHub repository
+- **Netlify**: Drag and drop the `public/` directory
+- **Vercel**: Connect your repository and set the output directory to `public/`
+- **AWS S3**: Upload the contents of `public/` to an S3 bucket
+- **Traditional Web Server**: Upload to any web server
 
-The contact form uses [Web3Forms](https://web3forms.com/) for form submission. To set up the contact form:
+## Development
 
-1. Go to [Web3Forms](https://web3forms.com/)
-2. Click "Get Access Key"
-3. Choose your preferred authentication method (Email, GitHub, or Google)
-4. Copy your access key
-5. Replace `YOUR_ACCESS_KEY` in the contact form's `data-access-key` attribute with your actual access key
+### Adding Dependencies
 
-The form will automatically handle:
+```bash
+go get github.com/new-dependency
+go mod tidy
+```
 
-- Email delivery
-- Spam protection
-- Form validation
-- Success/error messages
-- File attachments (if enabled)
+### Testing
 
-Note: Web3Forms is free for up to 250 submissions per month. For higher volumes, consider their paid plans.
+```bash
+go test ./...
+```
+
+### Code Style
+
+Follow Go conventions:
+- Use `gofmt` for code formatting
+- Follow Go naming conventions
+- Add comments for exported functions
+- Handle errors appropriately
+
+## Troubleshooting
 
 ### Common Issues
 
-1. **Node.js not found**:
+1. **Template Not Found**: Ensure template files are in the `templates/` directory
+2. **Image Not Loading**: Check that images are in `static/img/` and referenced correctly
+3. **Markdown Not Parsing**: Verify front matter format and markdown syntax
+4. **Build Errors**: Check Go version and dependencies
 
-   - Install Node.js using Homebrew: `brew install node`
-   - Or download from https://nodejs.org/
+### Debug Mode
 
-2. **Port 3000 already in use**:
+Add debug logging to `main.go`:
 
-   - Change the port in `server.js`
-   - Or kill the process using the port: `lsof -i :3000` then `kill -9 PID`
-
-3. **GitHub Pages not updating**:
-   - Wait a few minutes for changes to propagate
-   - Clear your browser cache
-   - Check repository settings
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Acknowledgments
-
-- Fonts: [Inter](https://fonts.google.com/specimen/Inter) and [Lobster](https://fonts.google.com/specimen/Lobster)
-- Icons: [Font Awesome](https://fontawesome.com/)
-- Form Handling: [Web3Forms](https://web3forms.com/)
+```go
+log.SetFlags(log.LstdFlags | log.Lshortfile)
+```
 
 ## Contributing
 
-Feel free to submit issues and enhancement requests!
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Test the generator
+5. Submit a pull request
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
