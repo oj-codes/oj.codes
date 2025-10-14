@@ -139,6 +139,22 @@ This will:
 4. Generate HTML pages using the templates
 5. Output the complete static site to `public/`
 
+### Serve Locally for Development
+
+After generating the site, you can preview it locally before deploying:
+
+```bash
+# Generate the site first
+go run main.go
+
+# Serve the site locally (requires npx/Node.js)
+npx serve public
+```
+
+The site will be available at `http://localhost:3000` by default. Open this URL in your browser to preview your changes.
+
+**Note**: Use an incognito/private browsing window to avoid cached versions of CSS and JavaScript files.
+
 ### Build for Production
 
 ```bash
@@ -151,9 +167,11 @@ go build -o static-site-generator main.go
 1. **Add Content**: Create new markdown files in the appropriate content directory
 2. **Update Configuration**: Modify `config.json` for site-wide changes
 3. **Customize Templates**: Edit HTML templates in the `templates/` directory
-4. **Add Assets**: Place images, CSS, JS files in the `static/` directory
-5. **Generate**: Run the generator to build the updated site
-6. **Deploy**: Upload the `public/` directory to your web server
+4. **Edit Styles**: Modify CSS files in the `static/css/` directory
+5. **Add Assets**: Place images, JS files, and other assets in the `static/` directory
+6. **Generate**: Run `go run main.go` to build the updated site
+7. **Preview**: Run `npx serve public` to view changes locally at `http://localhost:3000`
+8. **Deploy**: Upload the `public/` directory to your web server or push to GitHub for automatic deployment
 
 ## Content Organization
 
