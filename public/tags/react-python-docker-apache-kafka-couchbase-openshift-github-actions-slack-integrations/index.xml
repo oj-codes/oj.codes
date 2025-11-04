@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>React, Python, Docker, Apache Kafka, Couchbase, OpenShift, GitHub Actions, Slack Integrations on </title>
+    <link>//localhost:1313/tags/react-python-docker-apache-kafka-couchbase-openshift-github-actions-slack-integrations/</link>
+    <description>Recent content in React, Python, Docker, Apache Kafka, Couchbase, OpenShift, GitHub Actions, Slack Integrations on </description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 21 Oct 2019 00:00:00 +0000</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/react-python-docker-apache-kafka-couchbase-openshift-github-actions-slack-integrations/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>API Endpoint Monitor</title>
+      <link>//localhost:1313/projects/api-endpoint-monitor/</link>
+      <pubDate>Mon, 21 Oct 2019 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/projects/api-endpoint-monitor/</guid>
+      <description>&lt;h1 id=&#34;api-endpoint-monitor&#34;&gt;API Endpoint Monitor&lt;/h1&gt;&#xA;&lt;h2 id=&#34;project-overview&#34;&gt;Project Overview&lt;/h2&gt;&#xA;&lt;p&gt;The API Endpoint Monitor project set out to modernize and extend our legacy uptime-checking tool into a scalable, event-driven monitoring platform. As Lead SRE, I redesigned the system around a service-based architecture: Kafka serves as the backbone for ingesting health-check events at high throughput, Python worker services perform distributed endpoint probes, collect metrics, and trigger alerts, and a React-based dashboard provides real-time visibility into service health. By rebuilding the codebase from the ground up, we achieved sub-second outage detection, granular performance insights, and an integrated alert pipeline, streamlining on-call workflows and ensuring our teams could respond faster and more confidently to service degradations.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

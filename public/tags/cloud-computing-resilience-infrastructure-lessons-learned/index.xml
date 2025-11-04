@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cloud Computing, Resilience, Infrastructure, Lessons Learned on </title>
+    <link>//localhost:1313/tags/cloud-computing-resilience-infrastructure-lessons-learned/</link>
+    <description>Recent content in Cloud Computing, Resilience, Infrastructure, Lessons Learned on </description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 13 Jun 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/cloud-computing-resilience-infrastructure-lessons-learned/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Building Resilience after the June 12 Cloud Failures</title>
+      <link>//localhost:1313/blog/building-resilience-after-the-june-12-cloud-failures/</link>
+      <pubDate>Fri, 13 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/blog/building-resilience-after-the-june-12-cloud-failures/</guid>
+      <description>&lt;h1 id=&#34;building-resilience-after-the-june-12-cloud-failures&#34;&gt;Building Resilience after the June 12 Cloud Failures&lt;/h1&gt;&#xA;&lt;p&gt;Imagine having your morning coffee, opening Gmail, and&amp;hellip; nothing. No new emails, no calendar reminders, and your Smart Home devices are eerily silent. This was the reality for millions of users on June 12, 2025, when a cascade of cloud service failures brought down major platforms including Google Workspace, Microsoft 365, and countless other services that depend on these foundational cloud providers.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

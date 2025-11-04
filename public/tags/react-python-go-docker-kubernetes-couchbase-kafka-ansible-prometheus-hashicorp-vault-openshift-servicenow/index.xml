@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>React, Python, Go, Docker, Kubernetes, Couchbase, Kafka, Ansible, Prometheus, HashiCorp Vault, OpenShift, ServiceNow on </title>
+    <link>//localhost:1313/tags/react-python-go-docker-kubernetes-couchbase-kafka-ansible-prometheus-hashicorp-vault-openshift-servicenow/</link>
+    <description>Recent content in React, Python, Go, Docker, Kubernetes, Couchbase, Kafka, Ansible, Prometheus, HashiCorp Vault, OpenShift, ServiceNow on </description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 22 Sep 2022 00:00:00 +0000</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/react-python-go-docker-kubernetes-couchbase-kafka-ansible-prometheus-hashicorp-vault-openshift-servicenow/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Automation Platform</title>
+      <link>//localhost:1313/projects/automation-platform/</link>
+      <pubDate>Thu, 22 Sep 2022 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/projects/automation-platform/</guid>
+      <description>&lt;h1 id=&#34;automation-platform--amex&#34;&gt;Automation Platform @ Amex&lt;/h1&gt;&#xA;&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;&#xA;&lt;p&gt;I contributed to, and built core components for, a centralized automation platform that transformed how American Express teams provision and configure infrastructure, scaling from zero to 100,000 automated runs per month.&lt;/p&gt;&#xA;&lt;p&gt;The Automation Platform is a centralized catalog and execution engine that lets teams register, discover, and run reusable automations across environments. Users submit automations with metadata (name, description, target host or IP) and attach the actual scripts or code that execute on the specified systems. A built-in promotion workflow moves automations through e1 (development), e2 (staging), and e3 (production) with configurable approval gates. Every automation integrates automatically with our internal ticketing system for traceability, comes with out-of-the-box monitoring dashboards, and is fully accessible via both a user-friendly web interface and a RESTful API for programmatic management.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

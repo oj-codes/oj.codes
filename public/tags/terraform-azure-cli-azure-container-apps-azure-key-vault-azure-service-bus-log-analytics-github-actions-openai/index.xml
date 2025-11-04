@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Terraform, Azure CLI, Azure Container Apps, Azure Key Vault, Azure Service Bus, Log Analytics, Github Actions, OpenAI on </title>
+    <link>//localhost:1313/tags/terraform-azure-cli-azure-container-apps-azure-key-vault-azure-service-bus-log-analytics-github-actions-openai/</link>
+    <description>Recent content in Terraform, Azure CLI, Azure Container Apps, Azure Key Vault, Azure Service Bus, Log Analytics, Github Actions, OpenAI on </description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 28 Jan 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/terraform-azure-cli-azure-container-apps-azure-key-vault-azure-service-bus-log-analytics-github-actions-openai/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>UpLink Azure Migration</title>
+      <link>//localhost:1313/projects/uplink-azure-migration/</link>
+      <pubDate>Tue, 28 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/projects/uplink-azure-migration/</guid>
+      <description>&lt;h1 id=&#34;uplink-azure-migration&#34;&gt;UpLink Azure Migration&lt;/h1&gt;&#xA;&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;&#xA;&lt;p&gt;I am the Senior SRE on the UpLink team during the migration of DataSnipper&amp;rsquo;s UpLink platform from AWS to Azure, implementing modern cloud-native architecture and comprehensive monitoring solutions.&lt;/p&gt;&#xA;&lt;p&gt;The UpLink Azure Migration project was a comprehensive initiative to move the UpLink application, formerly hosted on AWS, into Microsoft Azure.&lt;/p&gt;&#xA;&lt;p&gt;My primary goals were to:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Standardize all infrastructure as code for consistency and repeatability&lt;/li&gt;&#xA;&lt;li&gt;Establish automated CI/CD pipelines for both frontend and backend components&lt;/li&gt;&#xA;&lt;li&gt;Centralize observability through custom dashboards&lt;/li&gt;&#xA;&lt;li&gt;Reduce operational toil and improve deployment velocity&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;By leveraging Azure’s native services, we enabled the team to deploy changes faster, gain end-to-end visibility, and operate within the West Europe region in addition to our existing East US presence.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
